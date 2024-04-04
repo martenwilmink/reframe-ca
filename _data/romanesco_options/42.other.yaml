@@ -1,0 +1,8 @@
+id: 42
+name: 'Something else'
+alias: other
+group: 6
+key: status_issues
+pos: 99
+parent: 6
+position: 99

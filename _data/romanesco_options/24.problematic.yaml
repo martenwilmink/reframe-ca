@@ -1,0 +1,9 @@
+id: 24
+name: Buggy
+description: 'This page attracts more problems than visitors.'
+alias: problematic
+group: 4
+key: status_health
+pos: 3
+parent: 4
+position: 3

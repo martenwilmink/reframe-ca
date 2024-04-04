@@ -1,0 +1,54 @@
+id: 583
+name: recaptchaOnSubmitV3
+description: 'Custom tpl chunk for the recaptchav2 extra, which also supports Recaptcha V3 now. This verifies the Recaptcha token with the Google API after the submit button is clicked.'
+category: m_fb_antispam
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.recaptchaonsubmitv3.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.recaptchaonsubmitv3.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div id="rc-root-[[+action_key]]-[[+form_id]]">
+    <input type="hidden" name="[[+token_key]]">
+    <input type="hidden" name="[[+action_key]]" value="[[+form_id]]">
+    <input type="hidden" name="fb[[*id]]-submit" value="1">
+</div>
+
+<div class="recaptcha badge">
+    <img class="ui image with tooltip onclick"
+         src="[[++romanesco.semantic_dist_path]]/themes/romanesco/assets/icons/recaptcha.svg"
+         alt="Recaptcha logo"
+         data-html='[[%formblocks.form.recaptchav3_legal_notice]]'
+         data-position='top right'
+    >
+</div>
+
+[[++formblocks.frontend_validation:isnot=`1`:then=`
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+
+        var rcr = document.getElementById('rc-root-[[+action_key]]-[[+form_id]]');
+        if (!rcr) {
+            console.error('recaptcha root not found');
+            return;
+        }
+        var form = rcr.closest('form');
+        if (!form) {
+            console.error('recaptcha root does not appear to be inside a form');
+            return;
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Disable submit button to prevent multiple submissions
+            form.querySelector('input[type="submit"][name="[[+action_key]]-submit"]').classList.add('disabled');
+
+            grecaptcha.ready(function() {
+                grecaptcha.execute('[[+site_key]]', {action: '[[+form_id]]'}).then(function(token) {
+                    rcr.querySelector('[name="[[+token_key]]"]').value = token;
+                    form.submit();
+                });
+            });
+        });
+    });
+</script>
+`]]

@@ -1,0 +1,12 @@
+id: 69
+parent: 30
+parent_properties: '{"key":"collapse_target","width":"50"}'
+name: 'Show/hide target'
+description: null
+content_desc: null
+sortorder: 2
+template: '[[+value:default=`no-target`]]'
+properties: '{"use_tinyrte":"0"}'
+availability: '[]'
+layouts: null
+settings: '[]'

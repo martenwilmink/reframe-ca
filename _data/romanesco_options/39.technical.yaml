@@ -1,0 +1,9 @@
+id: 39
+name: Technical
+description: 'The output on the site is incorrect, or there''s no output at all.'
+alias: technical
+group: 6
+key: status_issues
+pos: 4
+parent: 6
+position: 4

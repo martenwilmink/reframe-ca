@@ -1,0 +1,37 @@
+id: 121
+name: overviewOuterTestimonials
+description: ''
+category: o_overview
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:49:"romanesco.overviewoutertestimonials.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:50:"romanesco.overviewoutertestimonials.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[+layout_title:stripAsAlias:empty=`ov`:toPlaceholder=`ov_id`]]
+[[setBoxType? &input=`[[+row_tpl]]` &prefix=`[[+ov_id]]_[[+layout_id]]_[[+unique_idx]]`]]
+
+[[$overviewSettingsPrepare? &uid=`[[+prefix]]`]]
+
+[[![[If? &subject=`[[+pagination]]` &operator=`EQ` &operand=`1` &then=`pdoPage` &else=`getCache`]]?
+    &element=`getResources`
+    [[++custom_cache:eq=`1`:then=`&cacheKey=`custom/overviews/testimonials``]]
+
+    &parents=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`-1` &else=`[[++romanesco.testimonial_container_id]]`]]`
+    &resources=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`[[+resources]]` &else=`[[+excluded_resources:empty=`null`]]`]]`
+    &limit=`[[modifiedIf? &subject=`[[+prefix]]` &operator=`contains` &operand=`__` &then=`[[+cols:textToNumber:mpy=`2`]]` &else=`[[+limit:default=`0`]]`]]`
+    &offset=`[[+offset:default=`0`]]`
+    &tpl=`overviewRowReview[[+[[+prefix]].row_type]]`
+    &tplWrapper=`overviewWrapper[[+pagination:eq=`1`:then=`Pagination`]]`
+    &includeTVs=`1`
+    &processTVs=`1`
+    &tvPrefix=``
+    &showHidden=`1`
+    &sortby=`[[If? &subject=`[[+resources]]` &operator=`notempty` &then=`FIELD(modResource.id, [[+resources]])` &else=`[[+sortby]]`]]`
+    &sortdir=`[[+[[+prefix]].sortdir]]`
+
+    &text_size=`[[+text_size]]`
+    &show_rating=`[[+show_rating]]`
+    [[$overviewSettings? &uid=`[[+prefix]]`]]
+    [[[[+pagination:eq=`1`:then=`$overviewSettingsPagination? &uid=`[[+prefix]]``]]]]
+]]
+
+[[loadAssets? &component=`rating`]]

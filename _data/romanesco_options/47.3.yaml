@@ -1,0 +1,9 @@
+id: 47
+name: 'Important and urgent'
+description: 'This is a major roadblock right now.'
+alias: '3'
+group: 8
+key: issue_priority
+pos: 1
+parent: 8
+position: 1

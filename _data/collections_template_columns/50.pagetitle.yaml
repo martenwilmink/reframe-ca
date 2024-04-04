@@ -1,0 +1,10 @@
+id: 50
+template: 9
+label: Client
+name: pagetitle
+sortable: 1
+width: 80
+editor: textfield
+renderer: collections.renderer.pagetitleWithButtons
+position: 1
+sort_type: null

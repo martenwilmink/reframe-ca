@@ -1,0 +1,6 @@
+id: 4
+name: 'Content health'
+description: 'Indicator for the current condition of this page. This status only applies to pages that are done.'
+key: status_health
+pos: 4
+position: 4

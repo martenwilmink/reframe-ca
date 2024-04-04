@@ -1,0 +1,13 @@
+id: 93
+type: number
+name: fb_activation_resource_id
+caption: 'Activation page'
+description: 'Page containing the ConfirmRegister snippet for email activation. Enter page ID or drag the page from the menu tree to this input field. Defaults to the activation_resource_id system setting.'
+category: _Registration
+elements: ''
+rank: 2
+default_text: ''
+properties: 'a:1:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:0:"";s:4:"type";s:9:"textfield";s:7:"options";a:0:{}s:5:"value";s:5:"solid";s:7:"lexicon";N;s:4:"area";s:0:"";}}'
+input_properties: null
+output_properties: null
+content: ''

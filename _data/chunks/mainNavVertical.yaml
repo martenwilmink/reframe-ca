@@ -1,0 +1,36 @@
+id: 351
+name: mainNavVertical
+description: ''
+category: m_nav_primary
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:39:"romanesco.mainnavvertical.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:40:"romanesco.mainnavvertical.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<nav id="menu-vertical" class="ui [[++navbar_size:default=`large`]] secondary vertical [[++navbar_level:lte=`1`:then=`inverted`:else=`accordion`]] menu" role="navigation">
+    <div class="item branding">
+        [[[[modifiedIf?
+            &subject=`logoTheme`
+            &operator=`iselement`
+            &operand=`chunk`
+            &then=`$logoTheme? &classes=`inverted``
+            &else=`$logo? &classes=`inverted``
+        ]]]]
+    </div>
+
+    [[[[If?
+        &subject=`[[++navbar_level]]`
+        &operator=`lte`
+        &operand=`1`
+        &then=`$mainNavItems`
+        &else=`$mainNavItemsAccordion`
+    ]]]]
+
+    [[$mainNavItemsTheme]]
+
+    <div class="item toc">
+        <button class="ui right labeled inverted basic icon button">
+            <i class="sidebar icon"></i>
+            <span>[[%romanesco.menu.toc]]</span>
+        </button>
+    </div>
+</nav>

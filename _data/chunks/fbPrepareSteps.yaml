@@ -1,0 +1,57 @@
+id: 507
+name: fbPrepareSteps
+description: 'Prepare the necessary placeholders for each step of a multi-page form. These placeholders will be forwarded to fbForm.'
+category: m_formblocks
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:38:"romanesco.fbpreparesteps.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:39:"romanesco.fbpreparesteps.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[- Split steps into placeholders ]]
+[[[[If?
+    &subject=`[[+multiple_steps]]`
+    &operator=`notempty`
+    &then=`splitString? &input=`,[[+multiple_steps]],` &delimiter=`,[[*id]],` &prefix=`section``
+]]]]
+[[[[If?
+    &subject=`[[+section.1]]`
+    &operator=`notempty`
+    &then=`splitString? &input=`[[+section.1]]` &delimiter=`,` &prefix=`prev_steps``
+]]]]
+[[[[If?
+    &subject=`[[+section.2]]`
+    &operator=`notempty`
+    &then=`splitString? &input=`[[+section.2]]` &delimiter=`,` &prefix=`next_steps``
+]]]]
+[[[[If?
+    &subject=`[[+multiple_steps]]`
+    &operator=`notempty`
+    &then=`splitString? &input=`[[+multiple_steps]]` &delimiter=`,` &prefix=`step``
+]]]]
+
+[[- Find out which form is used in previous / next steps ]]
+[[[[If?
+    &subject=`[[+section.1]]`
+    &operator=`notempty`
+    &then=`pdoResources?
+        &parents=`-1`
+        &resources=`[[+section.1]]`
+        &tpl=`fbGetFormID`
+        &showHidden=`1`
+        &limit=`0`
+        &outputSeparator=`,`
+        &toPlaceholder=`prev_forms`
+    `
+]]]]
+[[[[If?
+    &subject=`[[+section.2]]`
+    &operator=`notempty`
+    &then=`pdoResources?
+        &parents=`-1`
+        &resources=`[[+section.2]]`
+        &tpl=`fbGetFormID`
+        &showHidden=`1`
+        &limit=`0`
+        &outputSeparator=`,`
+        &toPlaceholder=`next_forms`
+    `
+]]]]

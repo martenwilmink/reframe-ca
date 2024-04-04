@@ -1,0 +1,9 @@
+id: 50
+name: 'Not important and not urgent'
+description: 'Are you sure this is a problem?'
+alias: '0'
+group: 8
+key: issue_priority
+pos: 4
+parent: 8
+position: 4

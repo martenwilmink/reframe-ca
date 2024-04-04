@@ -1,0 +1,36 @@
+id: 170
+name: overviewRowImageLeftCard
+description: ''
+category: m_ov_image
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:48:"romanesco.overviewrowimageleftcard.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:49:"romanesco.overviewrowimageleftcard.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div class="ui stackable content grid">
+    <figure class="five wide column">
+        [[$overviewRowImageBasic? &uid=`[[+unique_idx]]`]]
+    </figure>
+
+    <div class="eleven wide column">
+        [[[[If?
+            &subject=`[[+show_subtitle]]`
+            &operator=`EQ`
+            &operand=`1`
+            &then=`$headingOverviewSubtitleLink? &uid=`[[+unique_idx]]``
+            &else=`$headingOverviewLink? &uid=`[[+unique_idx]]``
+        ]]]]
+        [[[[If?
+            &subject=`[[+show_introtext]]`
+            &operator=`EQ`
+            &operand=`1`
+            &then=`$introtextDescription? &uid=`[[+unique_idx]]``
+        ]]]]
+    </div>
+</div>
+
+[[If?
+    &subject=`[[+link_text]]`
+    &operator=`isnot`
+    &operand=`0`
+    &then=`<div class="extra content">[[$buttonHrefOverview? &classes=`right floated` &uid=`[[+unique_idx]]`]]</div>`
+]]

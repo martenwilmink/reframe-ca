@@ -1,0 +1,26 @@
+id: 474
+name: overviewWrapperPagination
+description: 'HACKERMAN ALERT. To prevent an extra wrapper (with empty pagination container) from appearing, a startPage placeholder is set, cached, and then compared to an uncached [[+page]] value.'
+category: m_ov_wrapper
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:49:"romanesco.overviewwrapperpagination.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:11:"conflicting";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:50:"romanesco.overviewwrapperpagination.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[- HACKERMAN ALERT
+    This pagination wrapper is being added again inside the paging container by
+    getPage, I guess because the same getResources call is run again.
+
+    To prevent the extra wrapper (with empty pagination container) from being
+    parsed, we set a startPage placeholder that remains the same because its
+    cached and compare it to an uncached [[+page]] value. If they differ, the
+    wrapper is already there and we return just the output instead.
+]]
+[[+page:toPlaceholder=`startPage`]]
+[[+startPage:eq=`[[!+page]]`:then=`
+<div id="[[If? &subject=`[[+prefix]]` &operator=`contains` &operand=`__` &then=`ov_[[Time]]` &else=`[[+prefix]]`]]" class="pagination-wrapper">
+    [[$overviewWrapper? &uid=`[[+idx]][[+page]][[+unique_idx]]`]]
+    [[$paginationFluid? &prefix=`[[+prefix]]`]]
+</div>
+`:else=`
+    [[+output]]
+`]]

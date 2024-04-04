@@ -1,0 +1,9 @@
+id: 21
+name: Done
+description: 'Time to let it grow. Let''s move on to the next one.'
+alias: done
+group: 3
+key: status_progress
+pos: 4
+parent: 3
+position: 4

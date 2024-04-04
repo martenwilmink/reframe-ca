@@ -1,0 +1,8 @@
+id: 2
+name: Training
+description: 'Hands-on, tutorial, how-to.'
+alias: train
+group: 1
+key: content_purpose
+parent: 1
+position: 0

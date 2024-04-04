@@ -1,0 +1,11 @@
+id: 100006
+name: ImagePlus.image
+description: 'Demo chunk for Image+ snippet output.'
+category: ImagePlus
+properties: 'a:0:{}'
+
+-----
+
+<img src="[[+url]]" alt="[[+alt]]"/>
+[[+caption:notempty=`<p class="caption">[[+caption]]</p>`]]
+[[+credits:notempty=`<p class="credits">[[+credits]]</p>`]]

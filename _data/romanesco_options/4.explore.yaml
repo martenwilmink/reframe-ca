@@ -1,0 +1,8 @@
+id: 4
+name: Exploring
+description: 'Trying something new.'
+alias: explore
+group: 1
+key: content_purpose
+parent: 1
+position: 0

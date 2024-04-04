@@ -1,0 +1,6 @@
+id: 1
+name: 'Content purpose'
+description: 'Options for indicating the primary function(s) of the content.'
+key: content_purpose
+pos: 1
+position: 1

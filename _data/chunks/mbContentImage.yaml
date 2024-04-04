@@ -1,0 +1,14 @@
+id: 100023
+name: mbContentImage
+description: 'A fixed width image, with a full URI to its source and (optionally) an external link.'
+category: mb_content
+properties: 'a:0:{}'
+
+-----
+
+<mj-image
+        src="[[++site_url]][[pthumb:replace=`/assets==assets`? &input=`[[+url]]` &options=`w=800&zc=1`]]"
+        alt="[[+alt]]"
+        title="[[+title]]"
+        href="[[+link]]"
+/>

@@ -1,0 +1,15 @@
+id: 97
+name: searchField
+description: ''
+category: m_search
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:35:"romanesco.searchfield.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:36:"romanesco.searchfield.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<form id="form-search" action="[[~[[+landing:default=`[[*id]]`]]]]" method="[[+method:default=`get`]]" role="search">
+    <div class="ui [[+search_field_classes:default=`tiny fluid`]] icon input">
+        <input type="search" name="[[+searchIndex]]" id="[[+searchIndex]]" value="[[+searchValue]]" placeholder="[[%romanesco.search.field_placeholder]]">
+        <input type="hidden" name="id" value="[[+landing:default=`[[*id]]`]]">
+        <i class="search icon link"></i>
+    </div>
+</form>

@@ -1,0 +1,6 @@
+id: 3
+name: 'Content progress'
+description: 'Indicator for the current development stage of this page.'
+key: status_progress
+pos: 3
+position: 3

@@ -1,0 +1,9 @@
+id: 30
+name: Layout
+description: 'The elements are not optimally positioned yet.'
+alias: layout
+group: 5
+key: status_improvements
+pos: 5
+parent: 5
+position: 5

@@ -1,0 +1,6 @@
+id: 8
+name: 'Issue priority'
+description: 'Indicate how urgent and important this issue currently is.'
+key: issue_priority
+pos: 8
+position: 8

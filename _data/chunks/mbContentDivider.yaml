@@ -1,0 +1,16 @@
+id: 100027
+name: mbContentDivider
+description: 'A horizontal line for dividing content inside a section.'
+category: mb_content
+properties: 'a:0:{}'
+
+-----
+
+<mj-divider
+        padding-top="20"
+        padding-bottom="0"
+        padding-left="0"
+        padding-right="0"
+        border-width="1px"
+        border-color="#f8f8f8"
+/>

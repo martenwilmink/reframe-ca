@@ -1,0 +1,8 @@
+id: 39
+template: 7
+label: Pattern
+name: pagetitle
+width: 80
+renderer: collections.renderer.pagetitleWithButtons
+position: 99
+sort_type: null

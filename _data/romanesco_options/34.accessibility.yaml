@@ -1,0 +1,9 @@
+id: 34
+name: Accessibility
+description: 'There are obstacles for visitors with disabilities.'
+alias: accessibility
+group: 5
+key: status_improvements
+pos: 9
+parent: 5
+position: 9

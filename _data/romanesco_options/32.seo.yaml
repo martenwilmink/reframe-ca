@@ -1,0 +1,9 @@
+id: 32
+name: SEO
+description: 'The content needs (better) optimization for search engines.'
+alias: seo
+group: 5
+key: status_improvements
+pos: 7
+parent: 5
+position: 7

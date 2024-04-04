@@ -1,0 +1,26 @@
+id: 302
+name: galleryOuter
+description: ''
+category: o_presentation
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:36:"romanesco.galleryouter.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:37:"romanesco.galleryouter.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div id="gallery-[[+unique_idx]]"
+     class="ui [[+cols]] column [[+responsive:replace=`,== `]] center aligned middle aligned [[+padding]] grid gallery [[+lightbox:eq=`1`:then=`with lightbox`]] [[+caption:eq=`1`:then=`with caption`]]"
+     data-uid="[[+unique_idx]]"
+    >
+    [[+rows]]
+</div>
+
+[[[[If?
+    &subject=`[[+lightbox]]`
+    &operator=`notempty`
+    &then=`sliderLoadAssets?
+        &uid=`[[+unique_idx]]`
+        &behaviour=`loop,arrows,keyboard`
+        &lazyload=`0`
+        &pagination=`bullets`
+        &lightbox=`[[+lightbox]]`
+    `
+]]]]

@@ -1,0 +1,5 @@
+id: 100001
+target: mgr
+principal_class: modUserGroup
+principal: 1
+policy: 100001

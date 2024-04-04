@@ -1,0 +1,25 @@
+id: 126
+name: projectHubOuter
+description: ''
+category: o_hub
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:39:"romanesco.projecthubouter.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:40:"romanesco.projecthubouter.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div class="ui container">
+    <div class="ui large feed">
+        [[migxLoopCollection?
+            &packageName=`romanescobackyard`
+            &classname=`rmTask`
+            &tpl=`projectHubRow`
+            &where=`{"resource_id":"[[++romanesco.dashboard_id:empty=`[[*id]]`]]","type":"project-hub","deleted":"0"}`
+            &sortConfig=`[{"sortby":"date","sortdir":"DESC"}]`
+        ]]
+        <div class="event">
+            <div class="label">
+                <i class="lab icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+[[loadAssets? &component=`feed`]]

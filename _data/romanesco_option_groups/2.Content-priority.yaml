@@ -1,0 +1,6 @@
+id: 2
+name: 'Content priority'
+description: 'Indicate how urgent and important the creation of this content is.'
+key: content_priority
+pos: 2
+position: 2

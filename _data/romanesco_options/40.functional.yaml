@@ -1,0 +1,9 @@
+id: 40
+name: Functional
+description: 'I hit a limitation or inconsistency in one of the components.'
+alias: functional
+group: 6
+key: status_issues
+pos: 5
+parent: 6
+position: 5

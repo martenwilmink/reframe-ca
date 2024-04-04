@@ -1,0 +1,6 @@
+id: 6
+name: 'Content issues'
+description: 'Tags to indicate what kind of problem the user is facing.'
+key: status_issues
+pos: 6
+position: 6

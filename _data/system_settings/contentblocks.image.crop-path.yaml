@@ -1,0 +1,4 @@
+key: contentblocks.image.crop_path
+value: 'content/[[+year]]/crops/'
+namespace: contentblocks
+area: 'Input: Image'

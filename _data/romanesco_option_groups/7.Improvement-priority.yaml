@@ -1,0 +1,6 @@
+id: 7
+name: 'Improvement priority'
+description: 'Indicate how urgent and important this improvement currently is.'
+key: improvement_priority
+pos: 7
+position: 7

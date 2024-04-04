@@ -1,0 +1,6 @@
+id: 18
+target: hub
+principal_class: modUserGroup
+principal: 3
+authority: 0
+policy: 15

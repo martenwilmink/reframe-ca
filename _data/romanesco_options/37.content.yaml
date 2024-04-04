@@ -1,0 +1,9 @@
+id: 37
+name: Content
+description: 'I''m having difficulties adding or editing content.'
+alias: content
+group: 6
+key: status_issues
+pos: 2
+parent: 6
+position: 2

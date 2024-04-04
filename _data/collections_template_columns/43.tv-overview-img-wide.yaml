@@ -1,0 +1,8 @@
+id: 43
+template: 8
+label: Image
+name: tv_overview_img_wide
+width: 80
+renderer: ImagePlus.MIGX_Renderer
+position: 5
+sort_type: null

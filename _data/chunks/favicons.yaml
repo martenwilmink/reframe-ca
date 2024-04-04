@@ -1,0 +1,18 @@
+id: 1
+name: favicons
+description: ''
+category: a_presentation
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:32:"romanesco.favicons.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:33:"romanesco.favicons.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<link rel="apple-touch-icon" sizes="180x180" href="[[++romanesco.favicon_path]]/apple-touch-icon[[+cache_buster_favicon]].png">
+<link rel="icon" type="image/png" sizes="32x32" href="[[++romanesco.favicon_path]]/favicon-32x32[[+cache_buster_favicon]].png">
+<link rel="icon" type="image/png" sizes="16x16" href="[[++romanesco.favicon_path]]/favicon-16x16[[+cache_buster_favicon]].png">
+<link rel="manifest" href="[[++romanesco.favicon_path]]/site.webmanifest">
+<link rel="mask-icon" href="[[++romanesco.favicon_path]]/safari-pinned-tab[[+cache_buster_favicon]].svg" color="#[[++favicon_theme_color:empty=`[[++theme_color_primary]]`]]">
+<link rel="shortcut icon" href="[[++romanesco.favicon_path]]/favicon[[+cache_buster_favicon]].ico">
+<meta name="theme-color" content="#[[++favicon_theme_color:empty=`[[++theme_color_primary]]`]]">
+<meta name="msapplication-TileColor" content="#[[++favicon_tile_color:empty=`[[++theme_color_primary]]`]]">
+<meta name="apple-mobile-web-app-title" content="[[++favicon_app_title:empty=`[[++site_name]]`]]">
+<meta name="application-name" content="[[++favicon_app_title:empty=`[[++site_name]]`]]">

@@ -1,0 +1,16 @@
+id: 100026
+name: mbContentSocialShare
+description: 'A row social media icons for sharing your content. You can choose which options to display.'
+category: mb_content
+properties: 'a:0:{}'
+
+-----
+
+<mj-social font-size="15px" icon-size="30px" mode="[[+display_type]]">
+    <mj-social-element name="facebook" href="https://mjml.io/">
+        Facebook
+    </mj-social-element>
+    <mj-social-element  name="twitter" href="https://mjml.io/">
+        Twitter
+    </mj-social-element>
+</mj-social>

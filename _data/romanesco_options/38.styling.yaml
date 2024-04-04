@@ -1,0 +1,9 @@
+id: 38
+name: Styling
+description: 'Things don''t look as they should on the website.'
+alias: styling
+group: 6
+key: status_issues
+pos: 3
+parent: 6
+position: 3

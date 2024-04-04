@@ -1,0 +1,63 @@
+id: 92
+name: hero
+description: 'The default hero unit, for use in the header of each page. This pattern evaluates a few options for its contents, appearance and inheritance, giving the editor some control over the output.'
+category: o_presentation
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:28:"romanesco.hero.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:29:"romanesco.hero.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[modifiedIf?
+    &subject=`[[getRawTVValue? &tv=`header_title`]]`
+    &operator=`EQ`
+    &operand=`@INHERIT`
+    &then=`[[[[#[[*parent]].header_inheritance:contains=`inherit_titles`:then=`*header_title`]]]]`
+    &else=`[[*header_title]]`
+    &toPlaceholder=`header_title`
+]]
+[[modifiedIf?
+    &subject=`[[getRawTVValue? &tv=`header_subtitle`]]`
+    &operator=`EQ`
+    &operand=`@INHERIT`
+    &then=`[[[[#[[*parent]].header_inheritance:contains=`inherit_titles`:then=`*header_subtitle`]]]]`
+    &else=`[[*header_subtitle]]`
+    &toPlaceholder=`header_subtitle`
+]]
+[[If:toPlaceholder=`header_background`?
+    &subject=`[[getRawTVValue? &tv=`header_background`]]`
+    &operator=`EQ`
+    &operand=`@INHERIT`
+    &then=`[[[[#[[*parent]].header_inheritance:contains=`inherit_background`:then=`*header_background`:else=``]]]]`
+    &else=`[[*header_background]]`
+]]
+[[modifiedIf?
+    &subject=`[[*header_background_img]]`
+    &operator=`notempty`
+    &then=`[[*alias]] background`
+    &else=`[[+header_background:empty=`[[++header_background_default]]`]]`
+    &toPlaceholder=`header_background_class`
+]]
+[[modifiedIf?
+    &subject=`heroTitlesTheme`
+    &operator=`iselement`
+    &operand=`chunk`
+    &then=`heroTitlesTheme`
+    &else=`heroTitles`
+    &toPlaceholder=`hero_tpl`
+]]
+
+<div id="hero" class="ui vertical stripe segment [[setBackground? &background=`[[+header_background_class]]`]]">
+    [[[[[[If?
+        &subject=`[[getRawTVValue? &tv=`header_cta`]]`
+        &operator=`EQ`
+        &operand=`@INHERIT`
+        &then=`#[[*parent]].header_inheritance:contains=`inherit_cta`:then=`$ctaHeader`:else=`$[[+hero_tpl]]``
+        &else=`
+        If?
+            &subject=`[[getRawTVValue? &tv=`header_cta`]]`
+            &operator=`isnot`
+            &operand=`@INHERIT`
+            &then=`$ctaHeader`
+            &else=`$[[+hero_tpl]]`
+        `
+    ]]]]]]
+</div>

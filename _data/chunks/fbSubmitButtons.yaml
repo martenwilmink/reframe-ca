@@ -1,0 +1,49 @@
+id: 508
+name: fbSubmitButtons
+description: 'Previous and next buttons for multi-page forms.'
+category: m_formblocks
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:39:"romanesco.fbsubmitbuttons.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:40:"romanesco.fbsubmitbuttons.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[pdoField?
+    &id=`[[+prev_step]]`
+    &field=`menutitle`
+    &default=`pagetitle`
+    &toPlaceholder=`prev_title`
+]]
+[[pdoField?
+    &id=`[[+next_step]]`
+    &field=`menutitle`
+    &default=`pagetitle`
+    &toPlaceholder=`next_title`
+]]
+
+<div class="ui very compact equal width middle aligned grid">
+    [[+prev_step:isnot=``:then=`
+    <div class="compact column">
+        <a href="[[~[[+prev_step]]]]" class="ui tertiary icon back button" title="Go back to [[+prev_title]]">
+            <i class="chevron left icon"></i>
+            <span>[[+prev_title]]</span>
+        </a>
+    </div>
+    `]]
+    <div class="right aligned column">
+        <input type="hidden" name="step-[[+current_id]]" value="completed">
+        [[+last_step:isnot=`[[+current_id]]`:then=`
+        <div class="ui [[+button_size:empty=`[[+form_size]]`]] input icon submission">
+            <input class="[[+button_size:empty=`[[+form_size]]`]] [[+button_type]] [[+button_alignment]] ui button"
+                   type="submit"
+                   name="fb[[*id]]-submit"
+                   value="[[+next_title]]"
+                   title="Continue to [[+next_title]]">
+            <i class="chevron right icon"></i>
+        </div>
+        `:else=`
+        <input class="[[+button_size:empty=`[[+form_size]]`]] [[+button_type]] [[+button_alignment]] ui button"
+               type="submit"
+               name="fb[[*id]]-submit"
+               value="[[*fb_submit_button:default=`[[%formblocks.form.submit_button]]`]]">
+        `]]
+    </div>
+</div>

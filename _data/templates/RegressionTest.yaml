@@ -1,0 +1,47 @@
+id: 32
+templatename: RegressionTest
+description: 'Needs to output a comma-separated list of IDs.'
+category: t_hub
+icon: icon-undo
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:38:"romanesco.regressiontest.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:39:"romanesco.regressiontest.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[*alias:replace=`-==_`:toPlaceholder=`backstop_id`]]
+{
+    "id": "[[+backstop_id]]",
+    "viewports": [[*backstop_viewports]],
+    "scenarios": [
+        [[!pdoResources?
+            &parents=`0`
+            &resources=`[[*content]]`
+            &limit=`0`
+            &showUnpublished=`0`
+            &tpl=`[[*backstop_scenario_tpl]]`
+            &outputSeparator=`,`
+        ]]
+    ],
+    "paths": {
+        "bitmaps_reference": "_backstop/[[+backstop_id]]/bitmaps_reference",
+        "bitmaps_test": "_backstop/[[+backstop_id]]/bitmaps_test",
+        "engine_scripts": "_operations/test/engine_scripts",
+        "html_report": "_backstop/[[+backstop_id]]/html_report",
+        "json_report": "_backstop/[[+backstop_id]]/json_report",
+        "ci_report": "_backstop/[[+backstop_id]]/ci_report"
+    },
+    "onBeforeScript": "[[*backstop_engine]]/onBefore.js",
+    "onReadyScript": "[[*backstop_engine]]/onReady.js",
+    "report": [
+        [[*backstop_report]]
+    ],
+    "engine": "[[*backstop_engine]]",
+    "engineOptions": {
+        "browser": "[[*backstop_engine_browser]]",
+        "args": ["--no-sandbox"]
+    },
+    "puppeteerOffscreenCaptureFix": false,
+    "asyncCaptureLimit": [[*backstop_async_capture_limit]],
+    "asyncCompareLimit": [[*backstop_async_compare_limit]],
+    "debug": false,
+    "debugWindow": false
+}

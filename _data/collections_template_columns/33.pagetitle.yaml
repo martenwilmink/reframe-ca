@@ -1,0 +1,8 @@
+id: 33
+template: 6
+label: 'Footer type'
+name: pagetitle
+width: 80
+renderer: collections.renderer.pagetitleWithButtons
+position: 1
+sort_type: null

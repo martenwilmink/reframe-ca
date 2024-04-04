@@ -1,0 +1,8 @@
+id: 5
+name: Updating
+description: 'Event, announcement, news.'
+alias: update
+group: 1
+key: content_purpose
+parent: 1
+position: 0

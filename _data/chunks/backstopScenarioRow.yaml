@@ -1,0 +1,27 @@
+id: 635
+name: backstopScenarioRow
+description: ''
+category: m_hub_testing
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:43:"romanesco.backstopscenariorow.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:6:"review";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:44:"romanesco.backstopscenariorow.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+{
+    "label": "[[+pagetitle]] ([[+id]])",
+    "url": "[[~[[+id]]? &scheme=`full`]]",
+    [[*backstop_reference_url:notempty=`
+    "referenceUrl": "[[*backstop_reference_url]][[+uri]]",
+    `]]
+    "delay": [[*backstop_delay]],
+    "hideSelectors": [[*backstop_hide_selectors:empty=`[]`]],
+    "removeSelectors": [[*backstop_remove_selectors:empty=`[]`]],
+    "hoverSelectors": [[*backstop_hover_selectors:empty=`[]`]],
+    "clickSelectors": [[*backstop_click_selectors:empty=`[]`]],
+    "keyPressSelectors": [[*backstop_keypress_selectors:empty=`[]`]],
+    "postInteractionWait": [[*backstop_post_interaction_wait]],
+    "selectors": [[*backstop_selectors:empty=`[]`]],
+    "selectorExpansion": [[*backstop_selector_expansion]],
+    "expect": [[*backstop_selector_expect]],
+    "misMatchThreshold": [[*backstop_mismatch_threshold]],
+    "requireSameDimensions": true
+}

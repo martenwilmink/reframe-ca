@@ -1,0 +1,8 @@
+id: 13
+name: Monetizing
+description: 'Make them pay'
+alias: monetize
+group: 1
+key: content_purpose
+parent: 1
+position: 0

@@ -1,0 +1,13 @@
+id: 405
+name: imgOpenGraphRow
+description: 'Row template for ImagePlus, containing properties for use in Open Graph metadata.'
+category: a_image
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:39:"romanesco.imgopengraphrow.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:40:"romanesco.imgopengraphrow.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[+width:lte=`[[+crop.width]]`:then=`[[+width]]`:else=`[[+crop.width]]`:toPlaceholder=`thumb_width`]]
+[[+thumb_width:div=`[[+crop.width]]`:replace=`,==.`:mpy=`[[+crop.height]]`:round=`up`:toPlaceholder=`thumb_height`]]
+<meta property="og:image" content="[[++site_url:clipString=`-1`]][[+url:imgOptimizeThumb]]" />
+<meta property="og:image:width" content="[[+thumb_width]]" />
+<meta property="og:image:height" content="[[+thumb_height]]" />

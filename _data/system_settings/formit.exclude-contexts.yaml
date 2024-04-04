@@ -1,0 +1,4 @@
+key: formit.exclude_contexts
+value: mgr
+namespace: formit
+area: formit

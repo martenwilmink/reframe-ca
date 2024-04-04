@@ -1,0 +1,55 @@
+id: 110
+name: headerBasic
+description: ''
+category: o_header
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:35:"romanesco.headerbasic.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:36:"romanesco.headerbasic.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[modifiedIf?
+    &subject=`[[*header_visibility]]`
+    &operator=`EQ`
+    &operand=`default`
+    &then=`[[++header_visibility_default]]`
+    &else=`[[*header_visibility]]`
+    &toPlaceholder=`header_visibility`
+]]
+[[modifiedIf?
+    &subject=`[[getRawTVValue? &tv=`header_visibility`]]`
+    &operator=`contains`
+    &operand=`@INHERIT`
+    &then=`[[#[[*parent]].header_inheritance:contains=`inherit_visibility`:then=`[[+header_visibility]]`:else=`[[++header_visibility_default]]`]]`
+    &else=`[[+header_visibility]]`
+    &toPlaceholder=`hero`
+]]
+
+<header id="header" class="[[+hero:eq=`0`:then=`without hero`]] [[++navbar_sticky:eq=`0`:then=`non-stick`]]">
+    [[[[modifiedIf?
+        &subject=`masthead`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$masthead`
+    ]]]]
+
+    [[[[modifiedIf?
+        &subject=`mainNavTheme`
+        &operator=`iselement`
+        &operand=`chunk`
+        &then=`$mainNavTheme`
+        &else=`$mainNav`
+    ]]]]
+
+    [[[[If?
+        &subject=`[[+hero]]`
+        &operator=`EQ`
+        &operand=`1`
+        &then=`$hero`
+    ]]]]
+
+    [[[[If?
+        &subject=`[[++search.add_to_menu]]`
+        &operator=`EQ`
+        &operand=`1`
+        &then=`$searchForm`
+    ]]]]
+</header>

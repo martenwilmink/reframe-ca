@@ -1,0 +1,9 @@
+id: 20
+name: 'Ready for review'
+description: 'One last check, before it can be published.'
+alias: review
+group: 3
+key: status_progress
+pos: 3
+parent: 3
+position: 3

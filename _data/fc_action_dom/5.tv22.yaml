@@ -1,0 +1,10 @@
+id: 447
+set: 5
+action: 'resource/*'
+name: tv22
+description: null
+container: modx-panel-resource
+rule: tvMove
+value: modx-backgrounds
+constraint_class: modResource
+rank: 30

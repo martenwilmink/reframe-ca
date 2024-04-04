@@ -1,0 +1,51 @@
+id: 79
+name: mainNav
+description: ''
+category: m_nav_primary
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:31:"romanesco.mainnav.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:32:"romanesco.mainnav.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<nav id="menu" class="ui [[++navbar_size:default=`large`]] secondary [[++navbar_sticky:is=`1`:then=`sticky`]] menu">
+    <div class="ui container">
+        <div class="item branding">
+            [[[[modifiedIf?
+                &subject=`logoTheme`
+                &operator=`iselement`
+                &operand=`chunk`
+                &then=`$logoTheme`
+                &else=`$logo`
+            ]]]]
+        </div>
+
+        [[[[If?
+            &subject=`[[++navbar_level]]`
+            &operator=`lte`
+            &operand=`1`
+            &then=`$mainNavItems? &classes=`right menu``
+            &else=`$mainNavItemsDropdown? &classes=`right menu``
+        ]]]]
+
+        [[$mainNavItemsTheme]]
+
+        <div class="item toc">
+            <button class="ui right labeled icon button">
+                <i class="sidebar icon"></i>
+                <span>[[%romanesco.menu.toc]]</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+[[[[If?
+    &subject=`[[++navbar_level]]`
+    &operator=`eq`
+    &operand=`3`
+    &then=`loadAssets? &component=`popup``
+]]]]
+[[[[If?
+    &subject=`[[++navbar_level]]`
+    &operator=`eq`
+    &operand=`2`
+    &then=`loadAssets? &component=`dropdown-css``
+]]]]

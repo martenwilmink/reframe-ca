@@ -1,0 +1,9 @@
+id: 49
+name: 'Not important, but urgent'
+description: 'A quick fix or dirty workaround will do.'
+alias: '1'
+group: 8
+key: issue_priority
+pos: 3
+parent: 8
+position: 3

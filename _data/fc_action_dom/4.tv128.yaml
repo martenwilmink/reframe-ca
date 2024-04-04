@@ -1,0 +1,10 @@
+id: 774
+set: 4
+action: 'resource/*'
+name: tv128
+description: null
+container: modx-panel-resource
+rule: tvMove
+value: modx-resource-main-right
+constraint_class: modResource
+rank: 20

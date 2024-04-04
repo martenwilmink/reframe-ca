@@ -1,0 +1,19 @@
+id: 100019
+name: mbSectionSidebarContent
+description: 'A sidebar that is adjustable in width, plus a content area.'
+category: mb_sections
+properties: 'a:0:{}'
+
+-----
+
+<mj-section background-color="[[+background_color]]"
+            background-url="[[+background_image]]"
+            background-size="cover"
+            background-repeat="no-repeat">
+    <mj-column width="30%">
+        [[+col_1]]
+    </mj-column>
+    <mj-column width="70%">
+        [[+col_2]]
+    </mj-column>
+</mj-section>

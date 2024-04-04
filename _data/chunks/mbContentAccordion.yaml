@@ -1,0 +1,11 @@
+id: 100028
+name: mbContentAccordion
+description: 'Hide content inside expandable containers, for a better reading experience on smaller screens.'
+category: mb_content
+properties: 'a:0:{}'
+
+-----
+
+<mj-accordion>
+    [[+rows]]
+</mj-accordion>

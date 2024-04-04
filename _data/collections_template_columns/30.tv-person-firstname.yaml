@@ -1,0 +1,9 @@
+id: 30
+template: 5
+label: 'First name'
+name: tv_person_firstname
+sortable: 1
+width: 50
+editor: textfield
+position: 7
+sort_type: null

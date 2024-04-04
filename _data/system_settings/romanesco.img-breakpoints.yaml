@@ -1,0 +1,4 @@
+key: romanesco.img_breakpoints
+value: '360,584,772,916,1024,1112,1200,1366,1600,1920'
+namespace: romanesco
+area: Performance

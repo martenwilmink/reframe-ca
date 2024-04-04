@@ -1,0 +1,9 @@
+id: 36
+name: Manager
+description: 'I''m having issues (or lost the way) while navigating MODX.'
+alias: manager
+group: 6
+key: status_issues
+pos: 1
+parent: 6
+position: 1

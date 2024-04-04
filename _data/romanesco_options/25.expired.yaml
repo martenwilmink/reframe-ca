@@ -1,0 +1,9 @@
+id: 25
+name: Wilting
+description: 'The content is outdated or has outlived its purpose.'
+alias: expired
+group: 4
+key: status_health
+pos: 4
+parent: 4
+position: 4

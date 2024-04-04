@@ -1,0 +1,22 @@
+id: 83
+name: offCanvasNav
+description: ''
+category: m_nav_primary
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:36:"romanesco.offcanvasnav.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:37:"romanesco.offcanvasnav.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<nav id="off-canvas" class="ui right inverted vertical accordion wide sidebar menu">
+    <div class="item home">
+        <a href="[[~[[++site_start]]]]" class="ui image brand badge">
+            [[%romanesco.menu.brand]]
+        </a>
+        <button class="ui basic inverted close icon button" title="[[%romanesco.menu.close_title]]">
+            <i class="large close icon"></i>
+        </button>
+    </div>
+
+    [[[[++navbar_level:lte=`1`:then=`$mainNavItemsAccordion? &level=`3``]]]]
+
+    [[$offCanvasNavItemsTheme]]
+</nav>

@@ -1,0 +1,9 @@
+id: 27
+name: Graphics
+description: 'It lacks visual balance or needs (more) supportive imagery.'
+alias: graphics
+group: 5
+key: status_improvements
+pos: 2
+parent: 5
+position: 2

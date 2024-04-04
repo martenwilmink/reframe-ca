@@ -1,0 +1,38 @@
+id: 38
+name: fbSelectDropdown
+description: ''
+category: m_fb_input
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.fbselectdropdown.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.fbselectdropdown.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[+field_name_html:empty=`[[+field_name]]`:fbStripAsAlias:fbPrefixOutput:toPlaceholder=`name`]]
+[[+field_type:contains=`multiple`:then=`multiple`:toPlaceholder=`multiple`]]
+[[modifiedIf?
+    &subject=`[[+multiple]][[+option_other]]`
+    &operator=`eq`
+    &operand=`1`
+    &then=`1`
+    &else=`0`
+    &toPlaceholder=`show_other`
+]]
+
+<div class="[[+field_width:after=` wide `]][[+field_layout:is=`inherit`:then=`[[+form_layout]]`:else=`[[+field_layout]]`]] field [[If? &subject=`[[+field_required]]` &operator=`EQ` &operand=`1` &then=`required`]] [[!If? &subject=`[[+fb[[*id]].error.[[+name]]]]` &operator=`notempty` &then=`error`]]">
+    <label for="[[+name]]">[[+field_name]]</label>
+    <select name="[[+name]][[+multiple:notempty=`[]`]]" id="[[+name]]" class="ui [[+field_type:empty=`dropdown`]] [[+option_other:is=`1`:then=`with other`]]" [[+multiple]]>
+        <option value="">[[+option_placeholder]]</option>
+        [[+rows]]
+        [[+show_other:is=`1`:then=`
+        <option value="[[+option_other_value]]" [[!+fb[[*id]].[[+name]]:FormItIsSelected=`[[+option_other_value]]`]]>
+            [[+option_other_value]]
+        </option>
+        `]]
+    </select>
+    [[+show_other:is=`1`:then=`
+    <div id="[[+name]]-other" class="other [[+check_other:is=``:then=`hidden`]]">
+        <input type="text" name="[[+name]]-other" value="[[!+fb[[*id]].[[+name]]-other]]" placeholder="[[%formblocks.field.other_namely]]">
+    </div>
+    `]]
+    [[+fb[[*id]].error.[[+name]]]]
+    [[+field_helptext:notempty=`<span class="help">[[+field_helptext]]</span>`]]
+</div>

@@ -1,0 +1,13 @@
+id: 100022
+name: mbContentButton
+description: 'Link to places outside of the email. Can optionally contain a tracking URL (from your sending tool of choice).'
+category: mb_content
+properties: 'a:0:{}'
+
+-----
+
+<mj-button background-color="[[+background_color:default=`#fff`]]"
+           color="#222"
+           href="[[+link]]">
+    [[+button_text]]
+</mj-button>

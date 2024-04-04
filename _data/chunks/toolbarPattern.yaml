@@ -1,0 +1,37 @@
+id: 339
+name: toolbarPattern
+description: ''
+category: o_toolbar
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:38:"romanesco.toolbarpattern.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:39:"romanesco.toolbarpattern.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div class="ui middle aligned equal width grid">
+    <div class="column">
+        [[$headingBasic?
+            &level=`h3`
+            &value=`[[+pattern_name]]<span class="ui mini [[%romanesco.patterns.status_[[+pattern_status]]_color]] empty circular label" title="[[%romanesco.patterns.status_[[+pattern_status]]]]"></span>`
+            &alignment=`middle aligned`
+        ]]
+    </div>
+
+    <div class="compact column">
+        [[+elementType:isnot=`ElectronTV`:and:isnot=`Computation`:then=`
+        <i class="unhide link icon with visibility toggle and tooltip"
+           data-target="#preview-[[+pattern_name:lcase]]"
+           data-targetState="visible"
+           data-content="[[%romanesco.patterns.preview_tooltip]]"
+           data-position="top center"></i>
+        `]]
+        <i class="muted code link icon with visibility toggle and tooltip"
+           data-target="#code-[[+pattern_name:lcase]]"
+           data-targetState="hidden"
+           data-content="[[%romanesco.patterns.code_tooltip]]"
+           data-position="top center"></i>
+        <i class="muted random link icon with visibility toggle and tooltip"
+           data-target="#connections-[[+pattern_name:lcase]]"
+           data-targetState="hidden"
+           data-content="[[%romanesco.patterns.connections_tooltip]]"
+           data-position="top center"></i>
+    </div>
+</div>

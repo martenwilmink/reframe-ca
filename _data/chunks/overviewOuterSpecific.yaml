@@ -1,0 +1,31 @@
+id: 122
+name: overviewOuterSpecific
+description: ''
+category: o_overview
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:45:"romanesco.overviewouterspecific.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:46:"romanesco.overviewouterspecific.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+[[+layout_title:stripAsAlias:empty=`ov`:toPlaceholder=`ov_id`]]
+[[setBoxType? &input=`[[+row_tpl]]` &prefix=`[[+ov_id]]_[[+layout_id]]_[[+unique_idx]]`]]
+
+[[$overviewSettingsPrepare? &uid=`[[+prefix]]`]]
+
+[[!getCache?
+    &element=`getResources`
+    [[++custom_cache:eq=`1`:then=`&cacheKey=`custom/overviews``]]
+
+    &parents=`-1`
+    &resources=`[[+resources]]`
+    &limit=`[[modifiedIf? &subject=`[[+prefix]]` &operator=`contains` &operand=`__` &then=`[[+cols:textToNumber:mpy=`2`]]` &else=`[[+limit:default=`0`]]`]]`
+    &tpl=`overviewRow[[+[[+prefix]].row_type]]`
+    &tplWrapper=`overviewWrapper`
+    &includeTVs=`1`
+    &processTVs=`1`
+    &tvPrefix=``
+    &showHidden=`1`
+    &sortby=`FIELD(modResource.id, [[+resources]])`
+    &sortdir=`ASC`
+
+    [[$overviewSettings? &uid=`[[+prefix]]`]]
+]]

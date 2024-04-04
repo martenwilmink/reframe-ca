@@ -1,0 +1,9 @@
+id: 19
+name: 'In progress'
+description: 'Work has begun. Leafs are starting to appear.'
+alias: in-progress
+group: 3
+key: status_progress
+pos: 2
+parent: 3
+position: 2

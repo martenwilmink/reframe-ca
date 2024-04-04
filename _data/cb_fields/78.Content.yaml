@@ -1,0 +1,14 @@
+id: 78
+parent: 76
+parent_properties: '{"key":"content","width":"100"}'
+input: layout
+name: Content
+description: ''
+content_desc: null
+sortorder: 3
+icon: chunk_A
+template: '[[+value]]'
+properties: '{"available_layouts":"7,8,9,10,11,12","available_templates":"-1"}'
+availability: '[]'
+layouts: ''
+settings: '[]'

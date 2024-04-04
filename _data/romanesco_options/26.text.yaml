@@ -1,0 +1,9 @@
+id: 26
+name: Text
+description: 'Content needs more structure or some trimming.'
+alias: text
+group: 5
+key: status_improvements
+pos: 1
+parent: 5
+position: 1

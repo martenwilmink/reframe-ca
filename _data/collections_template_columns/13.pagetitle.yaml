@@ -1,0 +1,8 @@
+id: 13
+template: 3
+label: CTA
+name: pagetitle
+width: 80
+renderer: collections.renderer.pagetitleWithButtons
+position: 1
+sort_type: null

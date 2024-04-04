@@ -1,0 +1,17 @@
+id: 417
+name: kanbanGridColumn
+description: ''
+category: m_hub
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:40:"romanesco.kanbangridcolumn.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:41:"romanesco.kanbangridcolumn.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div class="column [[+alias]]">
+    [[getResources?
+        &parents=`0`
+        &tvFilters=`status_progress==[[+alias]],content_priority==[[+priority]]`
+        &includeTVs=`1`
+        &tvPrefix=``
+        &tpl=`kanbanGridCard`
+    ]]
+</div>

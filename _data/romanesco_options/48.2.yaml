@@ -1,0 +1,9 @@
+id: 48
+name: 'Important, but not urgent'
+description: 'It can wait, but needs your full attention.'
+alias: '2'
+group: 8
+key: issue_priority
+pos: 2
+parent: 8
+position: 2

@@ -1,0 +1,16 @@
+id: 100029
+name: mbContentAccordionRow
+description: 'Row template for each section inside the accordion.'
+category: mb_content
+properties: 'a:0:{}'
+
+-----
+
+<mj-accordion-element>
+    <mj-accordion-title>[[+heading]]</mj-accordion-title>
+    <mj-accordion-text>
+          <span style="line-height:20px">
+              [[+content]]
+          </span>
+    </mj-accordion-text>
+</mj-accordion-element>

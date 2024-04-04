@@ -1,0 +1,35 @@
+id: 162
+name: overviewRowIconTopLinkCard
+description: ''
+category: m_ov_icon
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:50:"romanesco.overviewrowicontoplinkcard.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:5:"solid";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:51:"romanesco.overviewrowicontoplinkcard.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:20:"romanesco:properties";s:4:"area";s:0:"";}}'
+
+-----
+
+<div class="[[+alignment]] content">
+    <[[+level]] class="ui [[+title_classes]] centered icon header">
+        [[[[If?
+            &subject=`[[+icon_type]]`
+            &operator=`EQ`
+            &operand=`svg`
+            &then=`$iconSVG? &classes=`ui svg image` &url=`[[+overview_icon_svg:empty=`[[++overview_icon_fallback]]`]]``
+            &else=`$iconFont? &classes=`circular` &icon_class=`[[+overview_icon_font]]``
+        ]]]]
+        <span class="content">
+            [[+[[+title_field]]:empty=`[[+pagetitle]]`]]
+            [[If?
+                &subject=`[[+show_subtitle]]`
+                &operator=`EQ`
+                &operand=`1`
+                &then=`<span class="sub header">[[+overview_subtitle:empty=`[[+longtitle:empty=`[[+pagetitle]]`]]`]]</span>`
+            ]]
+        </span>
+    </[[+level]]>
+</div>
+
+[[If?
+    &subject=`[[+show_introtext]]`
+    &operator=`EQ`
+    &operand=`1`
+    &then=`<div class="[[+alignment]] content">[[$introtextDescription:stripTags=`<p><div>`? &uid=`[[+unique_idx]]`]]</div>`
+]]

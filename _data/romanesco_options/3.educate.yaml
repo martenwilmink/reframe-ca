@@ -1,0 +1,8 @@
+id: 3
+name: Education
+description: 'Conceptual, insights.'
+alias: educate
+group: 1
+key: content_purpose
+parent: 1
+position: 0

@@ -1,0 +1,6 @@
+id: 9
+name: 'FAQ category'
+description: 'Can be used to group FAQ sections together in a central collection.'
+key: faq_category
+pos: 9
+position: 9
