@@ -1,0 +1,13 @@
+# Ignore everything in this directory
+*
+
+# Except for:
+!.gitignore
+!/background/
+!/content/
+!/fallback/
+!/organization/
+!/overview/
+!/person/
+!/presentation/
+!/svg/
