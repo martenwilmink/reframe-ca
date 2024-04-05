@@ -1,0 +1,4 @@
+id: 100004
+target: dev
+principal_class: modUserGroup
+policy: 3
