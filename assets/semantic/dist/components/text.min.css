@@ -1,0 +1,9 @@
+/*!
+ * # Fomantic-UI 2.9.3 - Text
+ * https://github.com/fomantic/Fomantic-UI/
+ *
+ *
+ * Released under the MIT license
+ * https://opensource.org/licenses/MIT
+ *
+ */span.ui.text{line-height:1}span.ui.primary.text{color:#698f73}span.ui.inverted.primary.text{color:#eaf3ec}span.ui.secondary.text{color:#5f7ebe}span.ui.inverted.secondary.text{color:#edf1f8}span.ui.error.text{color:#db2828}span.ui.info.text{color:#31ccec}span.ui.success.text{color:#21ba45}span.ui.warning.text{color:#f2c037}span.ui.disabled.text{opacity:.45}span.ui.medium.text{font-size:1em}span.ui.mini.text{font-size:.4em}span.ui.tiny.text{font-size:.5em}span.ui.small.text{font-size:.75em}span.ui.large.text{font-size:1.5em}span.ui.big.text{font-size:2em}span.ui.huge.text{font-size:4em}span.ui.massive.text{font-size:8em}

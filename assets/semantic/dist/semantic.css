@@ -493,7 +493,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background: #ffffff;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1.28rem;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
@@ -508,7 +508,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.2;
   margin: 1.333em 0 1em;
   font-weight: bold;
@@ -1147,7 +1147,7 @@ blockquote footer,
 #content code[class*="language-"],
 #content pre[class*="language-"] {
   font-size: 1rem;
-  border-radius: 0.46228571rem;
+  border-radius: 0.34671429rem;
 }
 
 #content .code-toolbar {
@@ -1280,34 +1280,11 @@ blockquote footer,
 *******************************/
 
 .brand.logo {
-  background: url("/assets/img/logo.svg") no-repeat left center !important;
-  background-size: contain !important;
-  text-indent: -9999rem;
-  width: 34.35915493vw;
-  min-width: 11.9rem;
-  max-width: 16.66rem;
-  height: 3.39414634rem;
-}
-
-.brand.logo.inverted {
-  background-image: url("/assets/img/logo-inverted.svg") !important;
-}
-
-#menu.tightened .brand.logo {
-  max-width: 11.9rem;
-  height: 2.42439024rem;
-}
-
-.brand.badge {
-  background: url("/assets/img/badge.svg") no-repeat left center !important;
-  background-size: contain !important;
-  height: 36px;
-  width: 36px;
-  text-indent: -9999rem;
-}
-
-.brand.badge.inverted {
-  background-image: url("/assets/img/badge-inverted.svg") !important;
+  max-width: 50vw;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1 !important;
 }
 
 #menu-vertical .brand.logo {
@@ -1318,157 +1295,6 @@ blockquote footer,
 /*******************************
          Site Overrides
 *******************************/
-
-.content .small {
-  font-size: 85%;
-}
-
-#content .video {
-  overflow: hidden;
-}
-
-#content .video > video {
-  width: 100%;
-  max-width: calc(100% + 2px);
-  margin-top: -1px;
-  margin-left: -1px;
-}
-
-svg text,
-svg tspan {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-#home .lead.rotating.sentence {
-  position: relative;
-}
-
-#home .lead.rotating.sentence .words {
-  display: inline;
-  padding-left: 0.2em;
-}
-
-#home .lead.rotating.sentence .words > span {
-  position: absolute;
-  opacity: 0;
-  overflow: hidden;
-  animation: rotateWord 39s linear infinite 0s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(2) {
-  animation-delay: 3s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(3) {
-  animation-delay: 6s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(4) {
-  animation-delay: 9s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(5) {
-  animation-delay: 12s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(6) {
-  animation-delay: 15s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(7) {
-  animation-delay: 18s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(8) {
-  animation-delay: 21s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(9) {
-  animation-delay: 24s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(10) {
-  animation-delay: 27s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(11) {
-  animation-delay: 30s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(12) {
-  animation-delay: 33s;
-}
-
-#home .lead.rotating.sentence .words > span:nth-child(13) {
-  animation-delay: 36s;
-}
-
-@keyframes rotateWord {
-  0% {
-    opacity: 0;
-  }
-
-  1% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  2% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-
-  8% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-
-  9% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  30% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-#color-palette .basic.segment {
-  border-radius: 0.28571429em;
-}
-
-#commercial .cards > .card > .image {
-  display: flex;
-  align-items: center;
-  min-height: 8rem;
-  padding: 1em 1.5em;
-}
-
-#commercial .cards > .card > .image img,
-#commercial .cards > .card > .image svg {
-  max-width: 21rem;
-  height: auto;
-  margin: 0 auto;
-}
-
-#commercial .cards > .card:nth-child(1) .image {
-  background: #698f73;
-}
-
-#commercial .cards > .card:nth-child(2) .image {
-  background: #1f4a7f;
-}
-
-@media (max-width: 767.98px) {
-  #hub .ui.pattern.segment > .stackable.grid {
-    margin-left: -1rem !important;
-    margin-right: -1rem !important;
-  }
-}
 /*!
  * # Fomantic-UI 2.9.3 - Button
  * https://github.com/fomantic/Fomantic-UI/
@@ -1492,7 +1318,7 @@ svg tspan {
   vertical-align: baseline;
   background: #e0e1e2 none;
   color: rgba(0, 0, 0, 0.6);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0 0.25em 0 0;
   padding: 0.78571429em 1.5em 0.88571429em;
   text-transform: none;
@@ -1502,7 +1328,7 @@ svg tspan {
   font-style: normal;
   text-align: center;
   text-decoration: none;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -1975,16 +1801,16 @@ svg tspan {
 
   .ui.stackable.buttons .button:first-child {
     border-bottom-left-radius: 0;
-    border-top-right-radius: 0.28571429rem;
+    border-top-right-radius: 0.21428571rem;
   }
 
   .ui.stackable.buttons .button:last-child {
-    border-bottom-left-radius: 0.28571429rem;
+    border-bottom-left-radius: 0.21428571rem;
     border-top-right-radius: 0;
   }
 
   .ui.stackable.buttons .button:only-child {
-    border-radius: 0.28571429rem;
+    border-radius: 0.21428571rem;
   }
 }
 
@@ -2122,7 +1948,7 @@ svg tspan {
   background: transparent none;
   color: rgba(0, 0, 0, 0.6);
   font-weight: normal;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   text-transform: none;
   text-shadow: none !important;
   box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
@@ -2131,7 +1957,7 @@ svg tspan {
 .ui.basic.buttons {
   box-shadow: none;
   border: 1px solid rgba(34, 36, 38, 0.15);
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   border-right: none;
 }
 
@@ -2273,7 +2099,7 @@ svg tspan {
 
 .ui.tertiary.button:active {
   box-shadow: inset 0 -0.15em 0 #999999;
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
   color: #666666;
   background: none;
 }
@@ -2343,23 +2169,23 @@ svg tspan {
 }
 
 .ui.labeled.icon.buttons .button:first-child > .icon {
-  border-top-left-radius: 0.28571429rem;
-  border-bottom-left-radius: 0.28571429rem;
+  border-top-left-radius: 0.21428571rem;
+  border-bottom-left-radius: 0.21428571rem;
 }
 
 .ui.labeled.icon.buttons .button:last-child > .icon {
-  border-top-right-radius: 0.28571429rem;
-  border-bottom-right-radius: 0.28571429rem;
+  border-top-right-radius: 0.21428571rem;
+  border-bottom-right-radius: 0.21428571rem;
 }
 
 .ui.vertical.labeled.icon.buttons .button:first-child > .icon {
   border-radius: 0;
-  border-top-left-radius: 0.28571429rem;
+  border-top-left-radius: 0.21428571rem;
 }
 
 .ui.vertical.labeled.icon.buttons .button:last-child > .icon {
   border-radius: 0;
-  border-bottom-left-radius: 0.28571429rem;
+  border-bottom-left-radius: 0.21428571rem;
 }
 
 /* Loading Icon in Labeled Button */
@@ -2419,11 +2245,11 @@ svg tspan {
 /* Top / Bottom */
 
 .ui.attached.top.button {
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
 }
 
 .ui.attached.bottom.button {
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
 }
 
 /* Left / Right */
@@ -2433,14 +2259,14 @@ svg tspan {
   border-left: none;
   text-align: right;
   padding-right: 0.75em;
-  border-radius: 0.28571429rem 0 0 0.28571429rem;
+  border-radius: 0.21428571rem 0 0 0.21428571rem;
 }
 
 .ui.right.attached.button {
   display: inline-block;
   text-align: left;
   padding-left: 0.75em;
-  border-radius: 0 0.28571429rem 0.28571429rem 0;
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
 }
 
 /* Plural */
@@ -2471,28 +2297,28 @@ svg tspan {
 
 .ui[class*="top attached"].buttons {
   margin-bottom: 0;
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
 }
 
 .ui[class*="top attached"].buttons .button:first-child {
-  border-radius: 0.28571429rem 0 0 0;
+  border-radius: 0.21428571rem 0 0 0;
 }
 
 .ui[class*="top attached"].buttons .button:last-child {
-  border-radius: 0 0.28571429rem 0 0;
+  border-radius: 0 0.21428571rem 0 0;
 }
 
 .ui[class*="bottom attached"].buttons {
   margin-top: -1px;
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
 }
 
 .ui[class*="bottom attached"].buttons .button:first-child {
-  border-radius: 0 0 0 0.28571429rem;
+  border-radius: 0 0 0 0.21428571rem;
 }
 
 .ui[class*="bottom attached"].buttons .button:last-child {
-  border-radius: 0 0 0.28571429rem 0;
+  border-radius: 0 0 0.21428571rem 0;
 }
 
 /* Left / Right */
@@ -2501,34 +2327,34 @@ svg tspan {
   display: inline-flex;
   margin-right: 0;
   margin-left: -1px;
-  border-radius: 0 0.28571429rem 0.28571429rem 0;
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
 }
 
 .ui[class*="left attached"].buttons .button:first-child {
   margin-left: -1px;
-  border-radius: 0 0.28571429rem 0 0;
+  border-radius: 0 0.21428571rem 0 0;
 }
 
 .ui[class*="left attached"].buttons .button:last-child {
   margin-left: -1px;
-  border-radius: 0 0 0.28571429rem 0;
+  border-radius: 0 0 0.21428571rem 0;
 }
 
 .ui[class*="right attached"].buttons {
   display: inline-flex;
   margin-left: 0;
   margin-right: -1px;
-  border-radius: 0.28571429rem 0 0 0.28571429rem;
+  border-radius: 0.21428571rem 0 0 0.21428571rem;
 }
 
 .ui[class*="right attached"].buttons .button:first-child {
   margin-left: -1px;
-  border-radius: 0.28571429rem 0 0 0;
+  border-radius: 0.21428571rem 0 0 0;
 }
 
 .ui[class*="right attached"].buttons .button:last-child {
   margin-left: -1px;
-  border-radius: 0 0 0 0.28571429rem;
+  border-radius: 0 0 0 0.21428571rem;
 }
 
 /* -------------------
@@ -3280,13 +3106,13 @@ svg tspan {
 .ui.buttons .button:first-child {
   border-left: none;
   margin-left: 0;
-  border-top-left-radius: 0.28571429rem;
-  border-bottom-left-radius: 0.28571429rem;
+  border-top-left-radius: 0.21428571rem;
+  border-bottom-left-radius: 0.21428571rem;
 }
 
 .ui.buttons .button:last-child {
-  border-top-right-radius: 0.28571429rem;
-  border-bottom-right-radius: 0.28571429rem;
+  border-top-right-radius: 0.21428571rem;
+  border-bottom-right-radius: 0.21428571rem;
 }
 
 /* Vertical Style */
@@ -3309,18 +3135,18 @@ svg tspan {
 }
 
 .ui.vertical.buttons .button:first-child {
-  border-top-left-radius: 0.28571429rem;
-  border-top-right-radius: 0.28571429rem;
+  border-top-left-radius: 0.21428571rem;
+  border-top-right-radius: 0.21428571rem;
 }
 
 .ui.vertical.buttons .button:last-child {
   margin-bottom: 0;
-  border-bottom-left-radius: 0.28571429rem;
-  border-bottom-right-radius: 0.28571429rem;
+  border-bottom-left-radius: 0.21428571rem;
+  border-bottom-right-radius: 0.21428571rem;
 }
 
 .ui.vertical.buttons .button:only-child {
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 .ui.vertical.buttons .basic.button:not(:first-child) {
@@ -3352,15 +3178,15 @@ svg tspan {
 }
 
 .ui.wrapped.buttons:not(.spaced) .button:first-child {
-  border-radius: 0.28571429rem 0 0 0;
+  border-radius: 0.21428571rem 0 0 0;
 }
 
 .ui.wrapped.buttons:not(.spaced) .button:last-child {
-  border-radius: 0 0 0.28571429rem 0;
+  border-radius: 0 0 0.21428571rem 0;
 }
 
 .ui.wrapped[class*="top attached"].buttons {
-  border-radius: 0.28571429rem 0 0 0;
+  border-radius: 0.21428571rem 0 0 0;
 }
 
 .ui.wrapped[class*="top attached"].buttons .button:last-child {
@@ -3368,7 +3194,7 @@ svg tspan {
 }
 
 .ui.wrapped[class*="bottom attached"].buttons {
-  border-radius: 0 0 0 0.28571429rem;
+  border-radius: 0 0 0 0.21428571rem;
 }
 
 .ui.wrapped[class*="bottom attached"].buttons .button:first-child {
@@ -3378,7 +3204,7 @@ svg tspan {
 .ui.spaced.buttons .ui.button {
   margin-bottom: 1em;
   margin-right: 1em;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 .ui.spaced.basic.buttons {
@@ -3651,7 +3477,7 @@ svg tspan {
 /* Text Container */
 
 .ui.text.container {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   max-width: 52.26rem;
   line-height: 1.618;
   font-size: 1.70624rem;
@@ -4408,7 +4234,7 @@ hr.ui.divider {
   border: none;
   margin: 1.333em 0 1em;
   padding: 0 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2;
   text-transform: none;
@@ -4914,7 +4740,7 @@ a.ui.inverted.secondary.header.header.header:hover {
   padding: 0.78571429rem 1rem;
   box-shadow: none;
   border: 1px solid #d4d4d5;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 .ui.block.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
@@ -4971,11 +4797,11 @@ a.ui.inverted.secondary.header.header.header:hover {
 }
 
 .ui.top.attached.header {
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
 }
 
 .ui.bottom.attached.header {
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
 }
 
 /* Attached Sizes */
@@ -11379,7 +11205,7 @@ img.ui.image {
 .ui.rounded.image,
 .ui.rounded.images .image > *,
 .ui.rounded.image > * {
-  border-radius: 0.46228571rem;
+  border-radius: 0.34671429rem;
 }
 
 /* --------------
@@ -11683,11 +11509,11 @@ a.circular.image > img:hover {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
   line-height: 1.21428571em;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.3);
   color: rgba(0, 0, 0, 0.87);
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   transition: box-shadow 0.1s ease, border-color 0.1s ease;
   box-shadow: none;
 }
@@ -11932,7 +11758,7 @@ a.circular.image > img:hover {
   height: 100%;
   width: 2.67142857em;
   opacity: 0.5;
-  border-radius: 0 0.28571429rem 0.28571429rem 0;
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
   transition: opacity 0.3s ease;
 }
 
@@ -11969,7 +11795,7 @@ a.circular.image > img:hover {
 .ui[class*="left icon"].input > i.icon {
   right: auto;
   left: 1px;
-  border-radius: 0.28571429rem 0 0 0.28571429rem;
+  border-radius: 0.21428571rem 0 0 0.21428571rem;
 }
 
 .ui[class*="left icon"].input > i.circular.icon {
@@ -12394,7 +12220,7 @@ input[type="file"].ui.secondary.file.input::file-selector-button:hover,
   text-transform: none;
   font-weight: bold;
   border: 0 solid transparent;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   transition: background 0.1s ease;
 }
 
@@ -12595,21 +12421,21 @@ a.ui.label {
 .ui[class*="top left attached"].label {
   width: auto;
   margin-top: 0;
-  border-radius: 0.21428571rem 0 0.28571429rem 0;
+  border-radius: 0.21428571rem 0 0.21428571rem 0;
 }
 
 .ui[class*="top right attached"].label {
   width: auto;
   left: auto;
   right: 0;
-  border-radius: 0 0.21428571rem 0 0.28571429rem;
+  border-radius: 0 0.21428571rem 0 0.21428571rem;
 }
 
 .ui[class*="bottom left attached"].label {
   width: auto;
   top: auto;
   bottom: 0;
-  border-radius: 0 0.28571429rem 0 0.21428571rem;
+  border-radius: 0 0.21428571rem 0 0.21428571rem;
 }
 
 .ui[class*="bottom right attached"].label {
@@ -12618,7 +12444,7 @@ a.ui.label {
   left: auto;
   right: 0;
   width: auto;
-  border-radius: 0.28571429rem 0 0.21428571rem 0;
+  border-radius: 0.21428571rem 0 0.21428571rem 0;
 }
 
 /*******************************
@@ -13830,7 +13656,7 @@ ol.ui.list ol li,
 .ui.list > .item .header {
   display: block;
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -14784,7 +14610,7 @@ ul.ui.list li:before {
 }
 
 /*******************************
-    User Variable Overrides
+         Site Overrides
 *******************************/
 /*!
  * # Fomantic-UI 2.9.3 - Segment
@@ -14806,7 +14632,7 @@ ul.ui.list li:before {
   box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
   margin: 1rem 0;
   padding: 1em 1em;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   border: 1px solid rgba(34, 36, 38, 0.15);
 }
 
@@ -14881,7 +14707,7 @@ ul.ui.list li:before {
 
 .ui.grid.segment {
   margin: 1rem 0;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 /* Table */
@@ -15048,7 +14874,7 @@ ul.ui.list li:before {
   margin: 1rem 0;
   border: 1px solid rgba(34, 36, 38, 0.15);
   box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 .ui.segments:first-child {
@@ -15078,7 +14904,7 @@ ul.ui.list li:before {
   border-top: none;
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
 }
 
 /* Bottom */
@@ -15089,13 +14915,13 @@ ul.ui.list li:before {
   margin-top: 0;
   margin-bottom: 0;
   box-shadow: 0 2px 1px -1px rgba(34, 36, 38, 0.15);
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
 }
 
 /* Only */
 
 .ui.segments:not(.horizontal) > .segment:only-child {
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 /* Nested Group */
@@ -15122,7 +14948,7 @@ ul.ui.list li:before {
   padding: 0;
   box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
   margin: 1rem 0;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   border: 1px solid rgba(34, 36, 38, 0.15);
 }
 
@@ -15168,11 +14994,11 @@ ul.ui.list li:before {
 }
 
 .ui.horizontal.segments > .segment:first-child {
-  border-radius: 0.28571429rem 0 0 0.28571429rem;
+  border-radius: 0.21428571rem 0 0 0.21428571rem;
 }
 
 .ui.horizontal.segments > .segment:last-child {
-  border-radius: 0 0.28571429rem 0.28571429rem 0;
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
 }
 
 /* Equal Width */
@@ -15213,7 +15039,7 @@ ul.ui.list li:before {
   background: none transparent;
   box-shadow: none;
   border: none;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 /* -------------------
@@ -15354,7 +15180,7 @@ ul.ui.list li:before {
   margin-bottom: 0;
   top: 0;
   margin-top: 1rem;
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
 }
 
 .ui.segment[class*="top attached"]:first-child {
@@ -15373,7 +15199,7 @@ ul.ui.list li:before {
   top: 0;
   margin-bottom: 1rem;
   box-shadow: 0 2px 1px -1px rgba(34, 36, 38, 0.15);
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
 }
 
 .ui.segment[class*="bottom attached"]:last-child {
@@ -15688,7 +15514,7 @@ body.detail.non-white #main .ui.container:not(.fluid) .ui.vertical.stripe.segmen
   margin-bottom: calc(var(--baseline) * 5rem);
   padding: 0;
   border-top: none;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 body.detail #main .ui.container:not(.fluid) .ui.vertical.stripe.segment:not(.white):not(.transparent),
@@ -18396,7 +18222,7 @@ span.ui.massive.text {
 
 .ui.nested.grid.celled {
   margin-top: 0;
-  border-radius: 0.46228571rem;
+  border-radius: 0.34671429rem;
   overflow: hidden;
 }
 
@@ -18595,24 +18421,6 @@ body.vertical #main #footer {
 /*******************************
          Site Overrides
 *******************************/
-
-@media (max-width: 767.98px) {
-  #main .ui.fluid.container:not(.dormant-grid) {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-}
-
-@media (min-width: 768px) {
-  #main .ui.fluid.container:not(.dormant-grid) {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-  }
-}
-
-#main .ui.fluid.container:not(.dormant-grid) > .cards {
-  margin-top: 2em;
-}
 /*!
  * # Fomantic-UI 2.9.3 - Menu
  * https://github.com/fomantic/Fomantic-UI/
@@ -18634,12 +18442,12 @@ body.vertical #main #footer {
 .ui.menu {
   display: flex;
   margin: 1rem 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: rgba(255, 255, 255, 0.95);
   font-weight: normal;
   border: 1px solid rgba(34, 36, 38, 0.15);
   box-shadow: 0 1px 0 rgba(34, 36, 38, 0.15);
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   min-height: 2.85714286em;
 }
 
@@ -18699,7 +18507,7 @@ body.vertical #main #footer {
 }
 
 .ui.menu > .item:first-child {
-  border-radius: 0.28571429rem 0 0 0.28571429rem;
+  border-radius: 0.21428571rem 0 0 0.21428571rem;
 }
 
 /* Border */
@@ -18823,7 +18631,7 @@ body.vertical #main #footer {
 
 .ui.menu .dropdown.item .menu {
   min-width: calc(100% - 1px);
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
   background: #fff;
   margin: 0 0 0;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
@@ -18880,7 +18688,7 @@ body.vertical #main #footer {
 
 .ui.secondary.menu .dropdown.item > .menu,
 .ui.text.menu .dropdown.item > .menu {
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   margin-top: 0.35714286em;
 }
 
@@ -18910,7 +18718,7 @@ body.vertical #main #footer {
   min-width: max-content;
   margin: 0 0 0 0;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 0 0.28571429rem 0.28571429rem 0.28571429rem;
+  border-radius: 0 0.21428571rem 0.21428571rem 0.21428571rem;
 }
 
 .ui.vertical.menu .dropdown.item.upward .menu {
@@ -19172,11 +18980,11 @@ Floated Menu / Item
 }
 
 .ui.vertical.menu > .item:first-child {
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
 }
 
 .ui.vertical.menu > .item:last-child {
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
 }
 
 /* --- Label --- */
@@ -19247,15 +19055,15 @@ Floated Menu / Item
 }
 
 .ui.vertical.menu > .active.item:first-child {
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
 }
 
 .ui.vertical.menu > .active.item:last-child {
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
 }
 
 .ui.vertical.menu > .active.item:only-child {
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 .ui.vertical.menu .active.item .menu .active.item {
@@ -19315,7 +19123,7 @@ Floated Menu / Item
   font-weight: bold;
   margin-bottom: -1px;
   box-shadow: none;
-  border-radius: 0.28571429rem 0.28571429rem 0 0 !important;
+  border-radius: 0.21428571rem 0.21428571rem 0 0 !important;
 }
 
 .ui.tabular.menu .active.item:hover {
@@ -19361,7 +19169,7 @@ Floated Menu / Item
   color: rgba(0, 0, 0, 0.95);
   border-color: #d4d4d5;
   margin: -1px 0 0 0;
-  border-radius: 0 0 0.28571429rem 0.28571429rem !important;
+  border-radius: 0 0 0.21428571rem 0.21428571rem !important;
 }
 
 /* Vertical Tabular (Left) */
@@ -19387,7 +19195,7 @@ Floated Menu / Item
   color: rgba(0, 0, 0, 0.95);
   border-color: #d4d4d5;
   margin: 0 -1px 0 0;
-  border-radius: 0.28571429rem 0 0 0.28571429rem !important;
+  border-radius: 0.21428571rem 0 0 0.21428571rem !important;
 }
 
 /* Vertical Right Tabular */
@@ -19414,7 +19222,7 @@ Floated Menu / Item
   color: rgba(0, 0, 0, 0.95);
   border-color: #d4d4d5;
   margin: 0 0 0 -1px;
-  border-radius: 0 0.28571429rem 0.28571429rem 0 !important;
+  border-radius: 0 0.21428571rem 0.21428571rem 0 !important;
 }
 
 /* Dropdown */
@@ -19450,11 +19258,11 @@ Floated Menu / Item
 }
 
 .ui.pagination.menu .item:last-child {
-  border-radius: 0 0.28571429rem 0.28571429rem 0;
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
 }
 
 .ui.compact.menu .item:last-child {
-  border-radius: 0 0.28571429rem 0.28571429rem 0;
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
 }
 
 .ui.pagination.menu:not(.wrapping) .item:last-child::before {
@@ -19503,7 +19311,7 @@ Floated Menu / Item
   margin: 0 0.35714286em;
   background: none;
   transition: color 0.1s ease;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 /* No Divider */
@@ -19541,7 +19349,7 @@ Floated Menu / Item
   box-shadow: none;
   background: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.95);
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
 }
 
 /* Active Hover */
@@ -19604,7 +19412,7 @@ Floated Menu / Item
 .ui.secondary.vertical.menu > .item {
   border: none;
   margin: 0 0 0.35714286em;
-  border-radius: 0.28571429rem !important;
+  border-radius: 0.21428571rem !important;
 }
 
 .ui.secondary.vertical.menu > .header.item {
@@ -20266,7 +20074,7 @@ Floated Menu / Item
 }
 
 .ui.compact.menu:not(.secondary) .item:last-child {
-  border-radius: 0 0.28571429rem 0.28571429rem 0;
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
 }
 
 .ui.compact.menu .item:last-child::before {
@@ -20559,7 +20367,7 @@ Floated Menu / Item
   margin-bottom: 0;
   top: 0;
   margin-top: 1rem;
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
 }
 
 .ui.menu[class*="top attached"]:first-child {
@@ -20574,7 +20382,7 @@ Floated Menu / Item
   top: 0;
   margin-bottom: 1rem;
   box-shadow: none;
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
 }
 
 .ui[class*="bottom attached"].menu:last-child {
@@ -20584,11 +20392,11 @@ Floated Menu / Item
 /* Attached Menu Item */
 
 .ui.top.attached.menu > .item:first-child {
-  border-radius: 0.28571429rem 0 0 0;
+  border-radius: 0.21428571rem 0 0 0;
 }
 
 .ui.bottom.attached.menu > .item:first-child {
-  border-radius: 0 0 0 0.28571429rem;
+  border-radius: 0 0 0 0.21428571rem;
 }
 
 /* Tabular Attached */
@@ -20975,7 +20783,7 @@ Floated Menu / Item
 }
 
 #menu-dropdown > li.item {
-  border-radius: 0.28571429rem !important;
+  border-radius: 0.21428571rem !important;
 }
 
 #menu-dropdown > li.item:hover,
@@ -21187,7 +20995,7 @@ Floated Menu / Item
 }
 
 #submenu.secondary:not(.toc):not(.pointing).fixed .item {
-  border-radius: 0.28571429rem !important;
+  border-radius: 0.21428571rem !important;
 }
 
 #submenu.tabular.vertical .item .header a.active {
@@ -21373,43 +21181,6 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 /*******************************
          Site Overrides
 *******************************/
-
-@media only screen and (min-width: 768px) {
-  #menu .item .avatar.image {
-    margin-right: 0;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  #menu-vertical .item.branding {
-    padding-right: 2em !important;
-  }
-
-  #menu-vertical .brand.logo {
-    max-height: 2.7rem;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #menu-vertical .item.branding {
-    padding: 0 1em !important;
-  }
-
-  #menu-vertical .brand.logo {
-    margin-top: 0;
-    margin-bottom: 2em;
-    min-width: 100%;
-  }
-}
-
-#menu-accordion .item svg {
-  max-height: 1.5rem;
-  margin-right: 1.3rem;
-}
-
-#menu-accordion .item span.mobile.tablet.only {
-  flex: 1;
-}
 /*!
  * # Fomantic-UI 2.9.3 - Message
  * https://github.com/fomantic/Fomantic-UI/
@@ -21433,7 +21204,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
   transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.22) inset, 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
@@ -21453,7 +21224,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 
 .ui.message .header {
   display: block;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: -0.1em 0 0 0;
 }
@@ -21628,7 +21399,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 
 .ui.attached.message {
   margin-bottom: -1px;
-  border-radius: 0.28571429rem 0.28571429rem 0 0;
+  border-radius: 0.21428571rem 0.21428571rem 0 0;
   box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
   margin-left: -1px;
   margin-right: -1px;
@@ -21641,7 +21412,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 
 .ui.bottom.attached.message {
   margin-top: -1px;
-  border-radius: 0 0 0.28571429rem 0.28571429rem;
+  border-radius: 0 0 0.21428571rem 0.21428571rem;
   box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset, 0 1px 2px 0 rgba(34, 36, 38, 0.15);
 }
 
@@ -21932,7 +21703,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 
 .ui.message {
   border-color: currentColor;
-  border-left: 0.38571429rem solid;
+  border-left: 0.31428571rem solid;
 }
 
 .ui.message a {
@@ -21950,7 +21721,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 }
 
 /*******************************
-        Site Overrides
+         Site Overrides
 *******************************/
 /*!
  * # Fomantic-UI 2.9.3 - Card
@@ -21981,7 +21752,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
   background: #FFFFFF;
   padding: 0;
   border: none;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
   transition: box-shadow 0.1s ease, transform 0.1s ease;
   z-index: "";
@@ -22045,18 +21816,18 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 
 .ui.cards > .card > :first-child,
 .ui.card > :first-child {
-  border-radius: 0.28571429rem 0.28571429rem 0 0 !important;
+  border-radius: 0.21428571rem 0.21428571rem 0 0 !important;
   border-top: none !important;
 }
 
 .ui.cards > .card > :last-child,
 .ui.card > :last-child {
-  border-radius: 0 0 0.28571429rem 0.28571429rem !important;
+  border-radius: 0 0 0.21428571rem 0.21428571rem !important;
 }
 
 .ui.cards > .card > :only-child,
 .ui.card > :only-child {
-  border-radius: 0.28571429rem !important;
+  border-radius: 0.21428571rem !important;
 }
 
 /* --------------
@@ -22116,7 +21887,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 .ui.card > .content > .header {
   display: block;
   margin: "";
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.85);
 }
 
@@ -22448,7 +22219,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
   background: rgba(255, 255, 255, 0.8);
   width: 100%;
   height: 100%;
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   z-index: 100;
 }
 
@@ -22486,7 +22257,7 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
 
 .ui.horizontal.cards > .card > .image,
 .ui.card.horizontal > .image {
-  border-radius: 0.28571429rem 0 0 0.28571429rem;
+  border-radius: 0.21428571rem 0 0 0.21428571rem;
   width: 13rem;
 }
 
@@ -22499,12 +22270,12 @@ a#submenu-header.for.submenu-secondary:not(.pointing) {
   align-items: center;
   display: flex;
   width: 100%;
-  border-radius: 0.28571429rem 0 0 0.28571429rem;
+  border-radius: 0.21428571rem 0 0 0.21428571rem;
 }
 
 .ui.horizontal.cards > .card > .image:last-child > img,
 .ui.card.horizontal > .image:last-child > img {
-  border-radius: 0 0.28571429rem 0.28571429rem 0;
+  border-radius: 0 0.21428571rem 0.21428571rem 0;
 }
 
 .ui.horizontal.cards > .card > .content,
@@ -23294,12 +23065,12 @@ a.inverted.ui.card:hover,
 
 .ui.horizontal.cards .card > .image,
 .ui.card.horizontal > .image {
-  border-radius: 0.28571429rem 0 0 0.28571429rem !important;
+  border-radius: 0.21428571rem 0 0 0.21428571rem !important;
 }
 
 @media only screen and (max-width: 767.98px) {
   .ui.stackable.horizontal.cards .card > .image {
-    border-radius: 0.28571429rem 0.28571429rem 0 0 !important;
+    border-radius: 0.21428571rem 0.21428571rem 0 0 !important;
     width: auto;
   }
 }
@@ -23311,7 +23082,7 @@ a.inverted.ui.card:hover,
 }
 
 /*******************************
-    User Variable Overrides
+         Site Overrides
 *******************************/
 /*!
  * # Fomantic-UI 2.9.3 - Item
@@ -23451,7 +23222,7 @@ a.inverted.ui.card:hover,
 .ui.items > .item > .content > .header {
   display: inline-block;
   margin: -0.21425em 0 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }
@@ -23928,7 +23699,7 @@ a.inverted.ui.card:hover,
 *******************************/
 
 /*******************************
-    User Variable Overrides
+         Site Overrides
 *******************************/
 /*!
  * # Fomantic-UI 2.9.3 - Statistic
@@ -24015,7 +23786,7 @@ a.inverted.ui.card:hover,
 
 .ui.statistics .statistic > .value,
 .ui.statistic > .value {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 4rem;
   font-weight: normal;
   line-height: 1em;
@@ -24030,7 +23801,7 @@ a.inverted.ui.card:hover,
 
 .ui.statistics .statistic > .label,
 .ui.statistic > .label {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
@@ -24450,7 +24221,7 @@ a.inverted.ui.card:hover,
 *******************************/
 
 /*******************************
-    User Variable Overrides
+         Site Overrides
 *******************************/
 /*!
  * # Fomantic-UI 2.9.3 - Accordion
@@ -24483,7 +24254,7 @@ a.inverted.ui.card:hover,
 .ui.accordion .accordion > .title {
   cursor: pointer;
   padding: 0.5em 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
   color: rgba(0, 0, 0, 0.87);
   list-style: none;
@@ -24580,7 +24351,7 @@ a.inverted.ui.card:hover,
 
 .ui.styled.accordion,
 .ui.styled.accordion .accordion {
-  border-radius: 0.28571429rem;
+  border-radius: 0.21428571rem;
   background: #FFFFFF;
   box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15);
 }

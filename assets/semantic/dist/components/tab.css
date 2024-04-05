@@ -1,0 +1,100 @@
+/*!
+ * # Fomantic-UI 2.9.3 - Tab
+ * https://github.com/fomantic/Fomantic-UI/
+ *
+ *
+ * Released under the MIT license
+ * https://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+           UI Tabs
+*******************************/
+
+.ui.tab {
+  display: none;
+}
+
+
+/*******************************
+             States
+*******************************/
+
+
+/* --------------------
+       Active
+--------------------- */
+.ui.tab.active,
+.ui.tab.open {
+  display: block;
+}
+
+
+/*******************************
+         Tab Overrides
+*******************************/
+
+
+
+/*******************************
+         Tab Overrides
+*******************************/
+
+.ui.tabular.menu.item .item,
+.ui.tabbed.menu.item .item {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  text-align: left;
+}
+.ui.tabular.menu > .item:hover,
+.ui.tabbed.menu > .item:hover {
+  cursor: pointer;
+}
+.ui.tabular.menu > .item.active > .inverted.header,
+.ui.tabbed.menu > .item.active > .inverted.header {
+  color: rgba(0, 0, 0, 0.87);
+}
+.ui.tabular.menu.pointing.secondary > .item:not(.active),
+.ui.tabbed.menu.pointing.secondary > .item:not(.active) {
+  opacity: 0.6;
+}
+.ui.tabular.menu.pointing.secondary > .item:not(.active):hover,
+.ui.tabbed.menu.pointing.secondary > .item:not(.active):hover {
+  opacity: 0.8;
+}
+.ui.tabular.menu > .pointing.segment:not(.active):before,
+.ui.tabbed.menu > .pointing.segment:not(.active):before,
+.ui.tabular.menu > .pointing.segment:not(.active):after,
+.ui.tabbed.menu > .pointing.segment:not(.active):after {
+  display: none;
+}
+.ui.tabular.menu > .pointing.segment.down,
+.ui.tabbed.menu > .pointing.segment.down {
+  margin-bottom: 1em;
+}
+.ui.tabular.menu > .pointing.segment.up,
+.ui.tabbed.menu > .pointing.segment.up {
+  margin-top: 1em;
+}
+.ui.inverted.segment .ui.tabular.menu > .item,
+.ui.inverted.segment .ui.tabbed.menu > .item {
+  border: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .ui.tab .ui.stackable.grid > .column,
+  .ui.tab .ui.stackable.grid > .row > .column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.ui.inverted.segment .ui.tab {
+  border: none;
+}
+
+
+/*******************************
+        User Overrides
+*******************************/
+

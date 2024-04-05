@@ -1,0 +1,433 @@
+/*!
+ * # Fomantic-UI 2.9.3 - Container
+ * https://github.com/fomantic/Fomantic-UI/
+ *
+ *
+ * Released under the MIT license
+ * https://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Container
+*******************************/
+
+
+/* All Sizes */
+.ui.container {
+  display: block;
+  max-width: 100%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 767.98px) {
+  .ui.ui.ui.container:not(.fluid) {
+    width: auto;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .ui.ui.ui.grid.container {
+    width: auto;
+  }
+  .ui.ui.ui.relaxed.grid.container {
+    width: auto;
+  }
+  .ui.ui.ui.very.relaxed.grid.container {
+    width: auto;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .ui.ui.ui.container:not(.fluid) {
+    width: 723px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ui.ui.ui.grid.container {
+    width: calc(723px + 2rem);
+  }
+  .ui.ui.ui.relaxed.grid.container {
+    width: calc(723px + 3rem);
+  }
+  .ui.ui.ui.very.relaxed.grid.container {
+    width: calc(723px + 5rem);
+  }
+}
+
+/* Small Monitor */
+@media only screen and (min-width: 992px) and (max-width: 1299.98px) {
+  .ui.ui.ui.container:not(.fluid) {
+    width: 933px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ui.ui.ui.grid.container {
+    width: calc(933px + 2rem);
+  }
+  .ui.ui.ui.relaxed.grid.container {
+    width: calc(933px + 3rem);
+  }
+  .ui.ui.ui.very.relaxed.grid.container {
+    width: calc(933px + 5rem);
+  }
+}
+
+/* Large Monitor */
+@media only screen and (min-width: 1300px) {
+  .ui.ui.ui.container:not(.fluid) {
+    width: 1227px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ui.ui.ui.grid.container {
+    width: calc(1227px + 2rem);
+  }
+  .ui.ui.ui.relaxed.grid.container {
+    width: calc(1227px + 3rem);
+  }
+  .ui.ui.ui.very.relaxed.grid.container {
+    width: calc(1227px + 5rem);
+  }
+}
+
+
+/*******************************
+             Types
+*******************************/
+
+
+/* Text Container */
+.ui.text.container {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  max-width: 52.26rem;
+  line-height: 1.618;
+  font-size: 1.70624rem;
+}
+
+/* Wide Container */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .ui.ui.ui.wide.container {
+    width: 867.6px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1299.98px) {
+  .ui.ui.ui.wide.container {
+    width: 1119.6px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .ui.ui.ui.wide.container {
+    width: 1472.4px;
+  }
+}
+
+/* Fluid */
+.ui.fluid.container {
+  width: 100%;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+.ui[class*="left aligned"].container {
+  text-align: left;
+}
+.ui[class*="center aligned"].container {
+  text-align: center;
+}
+.ui[class*="right aligned"].container {
+  text-align: right;
+}
+.ui.justified.container {
+  text-align: justify;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+/* --------------
+      Scrolling
+    --------------- */
+.ui.scrolling.container {
+  overflow: auto;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .ui.scrolling.container.short {
+    max-height: 11.25em;
+  }
+  .ui.scrolling.container.short.resizable {
+    height: 11.25em;
+  }
+  .ui.scrolling.container[class*="very short"] {
+    max-height: 7.5em;
+  }
+  .ui.scrolling.container[class*="very short"].resizable {
+    height: 7.5em;
+  }
+  .ui.scrolling.container {
+    max-height: 15em;
+  }
+  .ui.scrolling.container.long {
+    max-height: 30em;
+  }
+  .ui.scrolling.container.long.resizable {
+    height: 30em;
+  }
+  .ui.scrolling.container[class*="very long"] {
+    max-height: 45em;
+  }
+  .ui.scrolling.container[class*="very long"].resizable {
+    height: 45em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ui.scrolling.container.short {
+    max-height: 13.5em;
+  }
+  .ui.scrolling.container.short.resizable {
+    height: 13.5em;
+  }
+  .ui.scrolling.container[class*="very short"] {
+    max-height: 9em;
+  }
+  .ui.scrolling.container[class*="very short"].resizable {
+    height: 9em;
+  }
+  .ui.scrolling.container {
+    max-height: 18em;
+  }
+  .ui.scrolling.container.resizable {
+    height: 18em;
+  }
+  .ui.scrolling.container.long {
+    max-height: 36em;
+  }
+  .ui.scrolling.container.long.resizable {
+    height: 36em;
+  }
+  .ui.scrolling.container[class*="very long"] {
+    max-height: 54em;
+  }
+  .ui.scrolling.container[class*="very long"].resizable {
+    height: 54em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .ui.scrolling.container.short {
+    max-height: 18em;
+  }
+  .ui.scrolling.container.short.resizable {
+    height: 18em;
+  }
+  .ui.scrolling.container[class*="very short"] {
+    max-height: 12em;
+  }
+  .ui.scrolling.container[class*="very short"].resizable {
+    height: 12em;
+  }
+  .ui.scrolling.container {
+    max-height: 24em;
+  }
+  .ui.scrolling.container.resizable {
+    height: 24em;
+  }
+  .ui.scrolling.container.long {
+    max-height: 48em;
+  }
+  .ui.scrolling.container.long.resizable {
+    height: 48em;
+  }
+  .ui.scrolling.container[class*="very long"] {
+    max-height: 72em;
+  }
+  .ui.scrolling.container[class*="very long"].resizable {
+    height: 72em;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .ui.scrolling.container.short {
+    max-height: 22.5em;
+  }
+  .ui.scrolling.container.short.resizable {
+    height: 22.5em;
+  }
+  .ui.scrolling.container[class*="very short"] {
+    max-height: 15em;
+  }
+  .ui.scrolling.container[class*="very short"].resizable {
+    height: 15em;
+  }
+  .ui.scrolling.container {
+    max-height: 30em;
+  }
+  .ui.scrolling.container.resizable {
+    height: 30em;
+  }
+  .ui.scrolling.container.long {
+    max-height: 60em;
+  }
+  .ui.scrolling.container.long.resizable {
+    height: 60em;
+  }
+  .ui.scrolling.container[class*="very long"] {
+    max-height: 90em;
+  }
+  .ui.scrolling.container[class*="very long"].resizable {
+    height: 90em;
+  }
+}
+.ui.resizable.scrolling.container {
+  resize: vertical;
+  max-height: none;
+}
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+@media only screen and (max-width: 768px) {
+  .ui.container:not(.fluid) .container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .ui.fluid.container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+body.readability #content .ui.container > * + h1,
+.ui.text.container:not(.conventional) > * + h1,
+body.readability #content .ui.container > * + h2,
+.ui.text.container:not(.conventional) > * + h2,
+body.readability #content .ui.container > * + h3,
+.ui.text.container:not(.conventional) > * + h3,
+body.readability #content .ui.container > * + h4,
+.ui.text.container:not(.conventional) > * + h4 {
+  margin-top: calc(var(--baseline) * 5rem);
+  margin-bottom: calc(var(--baseline) * 3rem);
+}
+body.readability #content .ui.container > *:first-child,
+.ui.text.container:not(.conventional) > *:first-child {
+  margin-top: 0 !important;
+}
+body.readability #content .ui.container > p:not(.meta),
+.ui.text.container:not(.conventional) > p:not(.meta) {
+  margin-top: calc(var(--baseline) * 3rem);
+}
+body.readability #content .ui.container > blockquote,
+.ui.text.container:not(.conventional) > blockquote {
+  margin-top: calc(var(--baseline) * 5rem) !important;
+  margin-bottom: calc(var(--baseline) * 5rem) !important;
+}
+body.readability #content .ui.container > .ui.divider,
+.ui.text.container:not(.conventional) > .ui.divider {
+  margin: calc(var(--baseline) * 3rem) 0;
+}
+@media only screen and (max-width: 767.98px) {
+  body.readability #content .ui.container p.image > img,
+  .ui.text.container:not(.conventional) p.image > img {
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0 -1em 0 -1em;
+    max-width: calc(100% + 2em);
+  }
+}
+@media only screen and (min-width: 768px) {
+  body.readability #content .ui.container h1,
+  .ui.text.container:not(.conventional) h1 {
+    margin-left: -2rem;
+  }
+  body.readability #content .ui.container p,
+  .ui.text.container:not(.conventional) p {
+    font-size: 1.70624rem;
+    line-height: 1.618;
+  }
+  body.readability #content .ui.container p.image,
+  .ui.text.container:not(.conventional) p.image {
+    text-align: center;
+  }
+  body.readability #content .ui.container p.image > img,
+  .ui.text.container:not(.conventional) p.image > img {
+    max-width: calc(100% + (2rem * 4));
+    margin-left: -4rem;
+    margin-right: -4rem;
+  }
+  body.readability #content .ui.container > blockquote.message,
+  .ui.text.container:not(.conventional) > blockquote.message {
+    margin: calc(var(--baseline) * 5rem) -4rem;
+    padding: calc(var(--baseline) * 3rem) 4rem calc(var(--baseline) * 3rem) calc(4rem - 5px);
+  }
+  body.readability #content .ui.container > table,
+  .ui.text.container:not(.conventional) > table {
+    width: calc(100% + (2rem * 2));
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  body.readability #content .ui.container > table th,
+  .ui.text.container:not(.conventional) > table th,
+  body.readability #content .ui.container > table td,
+  .ui.text.container:not(.conventional) > table td {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  body.readability #content .ui.container > div > pre,
+  .ui.text.container:not(.conventional) > div > pre {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding: 2rem;
+  }
+  body.readability #content .ui.container > p > code,
+  .ui.text.container:not(.conventional) > p > code {
+    padding: 0.5rem 0.8rem;
+  }
+  body.readability #content .ui.container pre,
+  .ui.text.container:not(.conventional) pre,
+  body.readability #content .ui.container code,
+  .ui.text.container:not(.conventional) code {
+    font-size: 1.3rem;
+    line-height: 1.618;
+  }
+}
+.ui.conventional.text.container {
+  font-size: inherit;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .ui.text.container {
+    max-width: 723px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .ui.text.container {
+    font-size: inherit;
+  }
+}
+.ui.tightened.container {
+  max-width: 933px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1299.98px) {
+  body.vertical .ui.text.container,
+  body.vertical .ui.tightened.container {
+    width: 100% !important;
+  }
+}
+
+
+/*******************************
+         Site Overrides
+*******************************/
+
