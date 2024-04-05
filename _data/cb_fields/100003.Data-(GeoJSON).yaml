@@ -1,0 +1,14 @@
+id: 100003
+parent: 100001
+parent_properties: '{"key":"layer_geojson","width":"50"}'
+input: code
+name: 'Data (GeoJSON)'
+description: ''
+content_desc: ''
+sortorder: 1
+icon: code
+template: '[[+value]]'
+properties: '{"available_languages":"JavaScript","default_language":"JavaScript","entities":"0"}'
+availability: '[]'
+layouts: null
+settings: '[]'

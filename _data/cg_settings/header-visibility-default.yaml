@@ -4,6 +4,6 @@ label: 'Default header visibility'
 xtype: modx-combo
 description: 'This can be overruled on each page if needed.'
 sortorder: 50
-value: '1'
+value: '0'
 group: 9
 options: On==1||Off==0

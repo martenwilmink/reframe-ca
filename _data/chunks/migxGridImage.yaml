@@ -1,0 +1,43 @@
+id: 100030
+name: migxGridImage
+description: 'Template for processing and displaying ImagePlus images. It needs the raw JSON as input. Also forward the class_key of the object, so the media source can be adjusted accordingly.'
+category: E1_data
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridimage.chunk.tpl'
+
+-----
+
+[[+class:replaceRegex=`^[a-z]+Image`:lcase:replace=`image==`:toPlaceholder=`category_[[+uid]]`]]
+[[modifiedIf?
+    &subject=`[[+class]]`
+    &operator=`is`
+    &operand=`earthImagePlanting`
+    &then=`[[migxLoopCollection?
+            &packageName=`earthbrain`
+            &classname=`earthPlanting`
+            &where=`{"id":"[[+parent_id]]"}`
+            &tpl=`@CODE:plant/[[+plant_id]]/`
+            &limit=`1`
+        ]]`
+    &else=`[[+category_[[+uid]]]]/[[+parent_id]]/`
+    &toPlaceholder=`path_[[+uid]]`
+]]
+[[If
+    :replace=`"source": [[+source:default=`[[++earthbrain.img_source]]`]]=="source": 1`
+    :replace=`"src": "=="src": "/uploads/img/[[+path_[[+uid]]]]`
+    :toPlaceholder=`img_[[+uid]]`?
+    &subject=`[[+img]]`
+    &operator=`empty`
+    &then=`
+        [[migxLoopCollection?
+            &packageName=`earthbrain`
+            &classname=`earthImage`
+            &where=`[{"class_key":"[[+class]]"},{"parent_id":"[[+id]]"},{"deleted:=":0}]`
+            &tpl=`@CODE:[[+img]]`
+            &limit=`1`
+            &sortConfig=`[{"sortby":"pos","sortdir":"ASC"}]`
+        ]]`
+    &else=`[[+img]]`
+]]
+<img src="[[ImagePlus? &options=`w=[[+width:default=`480`]]` &value=`[[+img_[[+uid]]]]`]]" style="max-width:[[+max_width:default=`100%`]];height:auto;">

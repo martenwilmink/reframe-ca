@@ -1,0 +1,14 @@
+id: 100006
+parent: 100001
+parent_properties: '{"key":"show_on_load","width":"10"}'
+input: dropdown
+name: onLoad
+description: ''
+content_desc: ''
+sortorder: 4
+icon: paragraph
+template: '[[+value]]'
+properties: '{"options":"1==Show\n0==Hide","default_value":"1","type_ahead":"No"}'
+availability: '[]'
+layouts: null
+settings: '[]'

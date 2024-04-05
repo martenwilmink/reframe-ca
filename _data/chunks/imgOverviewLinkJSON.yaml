@@ -1,0 +1,13 @@
+id: 100047
+name: imgOverviewLinkJSON
+description: ''
+category: E1_image
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_image/imgoverviewlinkjson.chunk.tpl'
+
+-----
+
+<a href="[[~[[+id]]]]" class="ui [[+classes]] [[+img_type:replace=`_== `]] image">
+    [[$imgOverviewJSON? &uid=`[[+unique_idx]]`]]
+</a>

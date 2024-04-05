@@ -1,0 +1,15 @@
+id: 100036
+name: migxGridClassKey
+description: 'Template for displaying relevant information based on class key.'
+category: E1_data
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridclasskey.chunk.tpl'
+
+-----
+
+[[Switch?
+    &get=`[[+class]]`
+    &c1=`forestPlant`
+    &do1=`<a href="?a=resource/update&id=[[+parent_id]]"><i class="icon icon-fw icon-edit" title="Edit forest"></i></a> [[#[[+parent_id]].pagetitle]]`
+]]

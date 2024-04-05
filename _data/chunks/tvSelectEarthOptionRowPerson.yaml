@@ -1,0 +1,11 @@
+id: 100077
+name: tvSelectEarthOptionRowPerson
+description: ''
+category: E1_sel_row
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/e1_sel_row/tvselectearthoptionrowperson.chunk.tpl'
+
+-----
+
+[[+firstname]] ([[+person_id]])==[[+person_id]]

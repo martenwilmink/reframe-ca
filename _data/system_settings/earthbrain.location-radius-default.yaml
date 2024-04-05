@@ -1,0 +1,5 @@
+key: earthbrain.location_radius_default
+value: '0'
+xtype: numberfield
+namespace: earthbrain
+area: Privacy

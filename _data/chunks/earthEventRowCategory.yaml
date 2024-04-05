@@ -1,0 +1,13 @@
+id: 100042
+name: earthEventRowCategory
+description: ''
+category: E1_event
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_event/eartheventrowcategory.chunk.tpl'
+
+-----
+
+<span class="ui tiny category label" style="color:[[+foreground]]; background-color:[[+background]]">
+    [[+name]]
+</span>

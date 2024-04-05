@@ -1,0 +1,4 @@
+key: earthbrain.img_source
+xtype: modx-combo-source
+namespace: earthbrain
+area: Image

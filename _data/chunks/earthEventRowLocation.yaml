@@ -1,0 +1,11 @@
+id: 100043
+name: earthEventRowLocation
+description: ''
+category: E1_event
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_event/eartheventrowlocation.chunk.tpl'
+
+-----
+
+[[+name]][[+address:notempty=`, [[+address]]`]]

@@ -1,0 +1,19 @@
+id: 100046
+name: imgOverviewJSON
+description: ''
+category: E1_image
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_image/imgoverviewjson.chunk.tpl'
+
+-----
+
+[[[[+imageFallback:is=``:then=`
+    ImagePlus?
+        &value=`[[+image_json]]`
+        &options=`w=[[++max_thumb_width]]&q=[[++img_quality]]&zc=1`
+        &type=`tpl`
+        &tpl=`imgOverview`
+`:else=`
+    $imgOverviewFallbackJSON
+`]]]]

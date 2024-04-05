@@ -1,0 +1,48 @@
+id: 100060
+name: earthEventRow
+description: ''
+category: E2_event
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e2_molecules/e2_event/eartheventrow.chunk.tpl'
+
+-----
+
+<section class="card event">
+    <figure class="center aligned image">
+        [[+startdate:strtotime:date=`%e`:toPlaceholder=`day_start`]]
+        [[+startdate:strtotime:date=`%b`:ucase:toPlaceholder=`month_start`]]
+        [[+enddate:strtotime:date=`%e`:toPlaceholder=`day_end`]]
+        [[+enddate:strtotime:date=`%b`:ucase:toPlaceholder=`month_end`]]
+
+        [[[[+day_end:isnot=`[[+day_start]]`:then=`
+        svgSanitize?
+            &file=`assets/img/event-dates.svg`
+            &uid=`[[+idx]]`
+        `:else=`
+        svgSanitize?
+            &file=`assets/img/event-date.svg`
+            &uid=`[[+idx]]`
+        `]]]]
+
+        <figcaption class="meta">
+            <span class="date[[+repeating:notempty=` repeating`]]">
+                [[+allday:eq=`1`:then=`All day`:else=`[[+range]]`]]
+            </span>
+        </figcaption>
+    </figure>
+
+    <div class="content">
+        <h3 class="header"><a href="[[+detail_url]]">[[+title]]</a></h3>
+        <p class="meta">
+            [[+location:notempty=`<small><i class="map marker alternate icon"></i> [[+location]]</small><br>`]]
+            [[+categories:notempty=`<span class="categories">[[+categories]]</span>`]]
+        </p>
+        <p class="description">[[+description]]</p>
+        [[$buttonHrefBasic?
+            &classes=`primary`
+            &link=`[[+detail_url]]`
+            &button_text=`View details`
+        ]]
+    </div>
+</section>

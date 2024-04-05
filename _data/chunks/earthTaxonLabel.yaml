@@ -1,0 +1,13 @@
+id: 100058
+name: earthTaxonLabel
+description: ''
+category: E1_taxonomy
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_taxonomy/earthtaxonlabel.chunk.tpl'
+
+-----
+
+<div class="ui label">
+    [[+Taxon_name_local:empty=`[[+Taxon_name:empty=`Unknown`]]`]]
+</div>

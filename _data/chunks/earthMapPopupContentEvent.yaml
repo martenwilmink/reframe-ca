@@ -1,0 +1,12 @@
+id: 100069
+name: earthMapPopupContentEvent
+description: ''
+category: E1_map_popup
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_map/e1_map_popup/earthmappopupcontentevent.chunk.tpl'
+
+-----
+
+<p><strong>[[+title]]</strong></p>
+<p>[[+description:stripTags]]</p>

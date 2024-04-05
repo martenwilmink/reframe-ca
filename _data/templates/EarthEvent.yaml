@@ -1,0 +1,57 @@
+id: 100001
+templatename: EarthEvent
+description: ''
+category: E4_event
+icon: icon-calendar
+properties: 'a:2:{s:13:"elementStatus";a:7:{s:4:"name";s:13:"elementStatus";s:4:"desc";s:35:"earthbrain.earthevent.elementStatus";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:12:"experimental";s:7:"lexicon";s:21:"earthbrain:properties";s:4:"area";s:0:"";}s:14:"elementPreview";a:7:{s:4:"name";s:14:"elementPreview";s:4:"desc";s:36:"earthbrain.earthevent.elementPreview";s:4:"type";s:9:"textfield";s:7:"options";s:0:"";s:5:"value";s:0:"";s:7:"lexicon";s:21:"earthbrain:properties";s:4:"area";s:0:"";}}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/templates/e4_templates/e4_event/event.template.tpl'
+
+-----
+
+<!DOCTYPE html>
+<html id="[[*context_key]]" lang="[[++cultureKey]]">
+
+[[[[If?
+    &subject=`[[$headTheme]]`
+    &operator=`isnull`
+    &then=`$head`
+    &else=`$headTheme`
+]]]]
+
+<body id="[[*alias]]" class="overview event">
+
+<div class="pusher">
+    <header id="header" class="masthead without hero [[++navbar_sticky:eq=`0`:then=`non-stick`]]">
+        [[[[If?
+            &subject=`[[$mainNavTheme]]`
+            &operator=`isnull`
+            &then=`$mainNav`
+            &else=`$mainNavTheme`
+        ]]]]
+    </header>
+
+    <main id="main" role="main">
+        <article id="content">
+            [[!AgendaDetail?
+                &tpl=`earthEventDetail`
+                &daterangeFormat=`||||g|:i a|`
+                &categoryTpl=`earthEventRowCategory`
+                &locationTpl=`earthEventRowLocation`
+            ]]
+        </article>
+    </main>
+
+    [[[[If?
+        &subject=`[[$footerTheme]]`
+        &operator=`isnull`
+        &then=`$footer`
+        &else=`$footerTheme`
+    ]]]]
+</div>
+
+[[$offCanvasNav]]
+[[$script]]
+
+</body>
+</html>

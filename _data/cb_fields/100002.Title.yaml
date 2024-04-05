@@ -1,0 +1,12 @@
+id: 100002
+parent: 100001
+parent_properties: '{"key":"layer_title","width":"20"}'
+name: Title
+description: ''
+content_desc: ''
+icon: paragraph
+template: '[[+value]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: null
+settings: '[]'

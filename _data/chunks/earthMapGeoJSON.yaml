@@ -1,0 +1,23 @@
+id: 100049
+name: earthMapGeoJSON
+description: 'Default option for prototyping / quick application.'
+category: E1_map
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_map/earthmapgeojson.chunk.tpl'
+
+-----
+
+{
+    "type": "Feature",
+    "properties": {
+        "name": "[[+name:empty=`[[+title]]`]]",
+        "amenity": "",
+        "popupContent": "[[+popup_content]]",
+        "id": "item-[[+id]]"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [ [[+lng]],[[+lat]] ]
+    }
+}

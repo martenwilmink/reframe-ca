@@ -1,0 +1,69 @@
+id: 100064
+name: earthEventDetail
+description: ''
+category: E3_event
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e3_organisms/e3_event/eartheventdetail.chunk.tpl'
+
+-----
+
+<div class="ui vertical stripe segment inverted primary-color">
+    <div class="ui container">
+        <h1 class="ui large inverted header">
+            [[+title]]
+        </h1>
+        <p class="lead">
+            [[+startdate:strtotime:date=`%B %e %Y`]]
+        </p>
+    </div>
+</div>
+
+<div class="ui vertical stripe segment white">
+    <div class="ui container">
+        <div class="ui stackable on tablet very relaxed equal width grid">
+            
+            <div id="event-intro" class="ten wide column">
+                [[+content:empty=`[[+description]]`:replace=`<p>==<p class="lead">`]]
+            </div>
+
+            <div id="event-details" class="column">
+                <div class="ui padded segment">
+                    <table class="ui large compact very basic unstackable table">
+                        [[+range:notempty=`
+                        <tr>
+                            <td>Time</td>
+                            <td>[[+allday:eq=`1`:then=`All day`:else=`[[+startdate:strtotime:date=`%l:%M %P`]]`]]</td>
+                        </tr>
+                        `]]
+                        [[+duration:notempty=`
+                        <tr>
+                            <td>[[%agenda.event_duration]]</td>
+                            <td>[[+duration]]</td>
+                        </tr>
+                        `]]
+                        [[+location:notempty=`
+                        <tr>
+                            <td>[[%agenda.event_location]]</td>
+                            <td>[[+location]]</td>
+                        </tr>
+                        `]]
+                        [[+categories:notempty=`
+                        <tr>
+                            <td>[[%agenda.event_categories]]</td>
+                            <td>[[+categories]]</td>
+                        </tr>
+                        `]]
+                    </table>
+
+                    [[+extended.url_external:notempty=`
+                    <a href="[[+extended.url_external]]" class="ui huge fluid primary button">
+                        Event website
+                    </a>
+                    `]]
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

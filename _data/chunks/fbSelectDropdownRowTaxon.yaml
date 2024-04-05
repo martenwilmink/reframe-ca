@@ -1,0 +1,20 @@
+id: 100045
+name: fbSelectDropdownRowTaxon
+description: ''
+category: E1_formblocks
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_formblocks/fbselectdropdownrowtaxon.chunk.tpl'
+
+-----
+
+[[!fbStripAsAlias:fbPrefixOutput:toPlaceholder=`field_alias`? &input=`[[+field_name]]`]]
+[[!fbStripNonAlpha:toPlaceholder=`value_[[+idx]]`? &input=`[[+name]]`]]
+
+<option value="[[+value_[[+idx]]]]"
+        [[!+fb[[*id]].[[+field_alias]]:FormItIsSelected=`[[+value_[[+idx]]]]`]]
+        [[!+fb[[*id]].[[+field_alias]]:contains=`[[+value_[[+idx]]]]`:then=`selected`]]
+>
+    [[+name]]
+    [[+name_local:prepend=`(`:append=`)`]]
+</option>

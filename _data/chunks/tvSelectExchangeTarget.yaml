@@ -1,0 +1,19 @@
+id: 100055
+name: tvSelectExchangeTarget
+description: ''
+category: E1_select
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/tvselectexchangetarget.chunk.tpl'
+
+-----
+
+[[[[Switch?
+    &get=`[[#POST.object_class_key]]`
+
+    &c1=`earthExchangePersonPerson`    &do1=`$tvSelectEarthOption@Person`
+    &c2=`earthExchangePersonSource`    &do2=`$tvSelectEarthOption@Source`
+    &c3=`earthExchangeSourcePerson`    &do3=`$tvSelectEarthOption@Person`
+
+    &default=`[[$tvSelectExchangeTargetAdditional]]`
+]]]]

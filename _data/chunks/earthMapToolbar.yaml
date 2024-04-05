@@ -1,0 +1,28 @@
+id: 100066
+name: earthMapToolbar
+description: ''
+category: E3_map
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e3_organisms/e3_map/earthmaptoolbar.chunk.tpl'
+
+-----
+
+<div class="ui large menu">
+    <div class="right icon menu">
+        <a href="[[~[[*parent]]]]map" class="[[*alias:contains=`map`:then=`active`]] item">
+            <i class="map icon"></i>
+        </a>
+        <a href="[[~[[*parent]]]]grid" class="[[*alias:contains=`grid`:then=`active`]] item">
+            <i class="th icon"></i>
+        </a>
+        <a href="[[~[[*parent]]]]list" class="[[*alias:contains=`list`:then=`active`]] item">
+            <i class="th list icon"></i>
+        </a>
+        [[-
+        <a href="[[~[[*parent]]]]gallery" class="[[*alias:contains=`gallery`:then=`active`]] item">
+            <i class="images icon"></i>
+        </a>
+        ]]
+    </div>
+</div>

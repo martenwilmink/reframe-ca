@@ -1,0 +1,3 @@
+pluginid: 100024
+event: OnUserActivate
+priority: 10

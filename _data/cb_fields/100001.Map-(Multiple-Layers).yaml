@@ -1,0 +1,15 @@
+id: 100001
+parent_properties: null
+input: repeater
+name: 'Map (Multiple Layers)'
+description: ''
+content_desc: ''
+sortorder: 99
+category: 100001
+icon: map
+icon_type: custom
+template: '@CHUNK earthMapLayerJS'
+properties: '{"wrapper_template":"@CHUNK earthMap","row_separator":"","max_items":"0","min_items":"1","add_first_item":"true","manager_columns":"1","layout_style":"default"}'
+availability: '[]'
+layouts: ''
+settings: '[{"reference":"map_id","title":"Map ID","description":"","fieldtype":"textfield","default_value":"reframe-map","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"base_layers","title":"Base layers","description":"","fieldtype":"checkbox","default_value":"Terrain,Satellite","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Terrain\nSatellite","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"default_layer","title":"Default layer","description":"","fieldtype":"radio","default_value":"Terrain","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"Terrain\nSatellite","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"},{"reference":"zoom_level_max","title":"Max zoom level","description":"","fieldtype":"textfield","default_value":"18","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"No","field_is_exposed":"modal","template":"[[+value]]"}]'

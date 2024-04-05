@@ -1,0 +1,19 @@
+id: 100040
+name: migxGridExchangeParentName
+description: 'Display correct name of exchange start point.'
+category: E1_data
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridexchangeparentname.chunk.tpl'
+
+-----
+
+[[[[Switch?
+    &get=`[[+class_key]]`
+
+    &c1=`earthExchangePersonPerson` &do1=`$migxGridPerson? &person_id=`[[+parent_id]]` &idx=`[[+idx]]``
+    &c2=`earthExchangePersonSource` &do2=`$migxGridPerson? &person_id=`[[+parent_id]]` &idx=`[[+idx]]``
+    &c3=`earthExchangeSourcePerson` &do3=`$migxGridSource? &source_id=`[[+parent_id]]` &idx=`[[+idx]]``
+
+    &default=`$migxGridExchangeParentNameAdditional? &idx=`[[+idx]]``
+]]]]

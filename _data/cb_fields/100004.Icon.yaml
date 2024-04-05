@@ -1,0 +1,14 @@
+id: 100004
+parent: 100001
+parent_properties: '{"key":"layer_icon","width":"10"}'
+input: dropdown
+name: Icon
+description: ''
+content_desc: ''
+sortorder: 2
+icon: paragraph
+template: '[[+value]]'
+properties: '{"options":"==Default\nredIcon==Red\ngreenIcon==Green","default_value":"","type_ahead":"No"}'
+availability: '[]'
+layouts: null
+settings: '[]'

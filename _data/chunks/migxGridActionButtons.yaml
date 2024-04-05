@@ -1,0 +1,16 @@
+id: 100035
+name: migxGridActionButtons
+description: 'A set of buttons to trigger MIGX actions, so you don''t have to right-mouse click all the time.'
+category: E1_data
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridactionbuttons.chunk.tpl'
+
+-----
+
+<div class="migx-actions-column">
+    <h3>[[+title]]</h3>
+    <ul class="actions">
+        <li><a href="#" class="controlBtn update this.update">Edit</a></li>
+    </ul>
+</div>

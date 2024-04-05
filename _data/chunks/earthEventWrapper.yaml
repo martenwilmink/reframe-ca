@@ -1,0 +1,16 @@
+id: 100059
+name: earthEventWrapper
+description: ''
+category: E2_event
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e2_molecules/e2_event/eartheventwrapper.chunk.tpl'
+
+-----
+
+<p class="lead">
+    [[+count]] upcoming event[[+count:gte=`2`:then=`s`]]:
+</p>
+<div id="events" class="ui one stackable horizontal cards center when stacked">
+    [[+output]]
+</div>

@@ -1,0 +1,60 @@
+id: 100062
+name: earthMapGetPlants
+description: ''
+category: E2_map
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e2_molecules/e2_map/earthmapgetplants.chunk.tpl'
+
+-----
+
+[[!getCache?
+    &element=`pdoResources`
+    [[++custom_cache:eq=`1`:then=`&cacheKey=`custom/maps/plants``]]
+    &class=`earthPlanting`
+
+    &depth=`0`
+    &limit=`0`
+    &offset=`0`
+    &tpl=`earthMapPlantGeoJSON`
+    &tplWrapper=`earthMapWrapperGeoJSON`
+    &where=`[
+        [[+forest_id:notempty=`
+        {"Plant.parent_id:=":[[+forest_id]]},
+        `]]
+        {"Location.lat:!=":""},
+        {"Location.lng:!=":""},
+        {"published:=":1}
+    ]`
+    &outputSeparator=`,`
+    &sortby=`id`
+
+    &leftJoin=`{
+        "Plant": {
+            "class": "earthPlant",
+            "on": "earthPlanting.plant_id = Plant.id"
+        },
+        "Taxon": {
+            "class": "earthTaxon",
+            "on": "Plant.taxon_id = Taxon.id"
+        },
+        "Location": {
+            "class": "earthLocation",
+            "on": "earthPlanting.location_id = Location.id"
+        },
+        "CreatedBy": {
+            "class": "modUserProfile",
+            "on": "earthPlanting.createdby = CreatedBy.internalKey"
+        }
+    }`
+    &groupby=`earthPlanting.id`
+    &select=`{
+        "Plant": "Plant.variety AS variety",
+        "Taxon": "Taxon.name AS name, Taxon.name_local AS name_local",
+        "Location": "Location.id AS location, Location.lat AS lat, Location.lng AS lng",
+        "CreatedBy": "CreatedBy.fullname AS admin",
+        "Planting": "earthPlanting.id AS id"
+    }`
+
+    &showLog=`0`
+]]

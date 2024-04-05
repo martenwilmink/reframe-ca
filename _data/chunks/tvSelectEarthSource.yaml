@@ -1,0 +1,18 @@
+id: 100053
+name: tvSelectEarthSource
+description: ''
+category: E1_select
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/tvselectearthsource.chunk.tpl'
+
+-----
+
+[[[[Switch?
+    &get=`[[#POST.object_class_key]]`
+
+    &c1=`earthSourcePerson`     &do1=`$tvSelectEarthOption@Person`
+    &c2=`earthSourceEvent`      &do2=`$tvSelectEarthOption@Event`
+
+    &default=`[[$tvSelectEarthSourceAdditional]]`
+]]]]

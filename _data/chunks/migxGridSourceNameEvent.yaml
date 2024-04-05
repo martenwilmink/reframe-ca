@@ -1,0 +1,13 @@
+id: 100039
+name: migxGridSourceNameEvent
+description: 'Source name template for events.'
+category: E1_data
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridsourcenameevent.chunk.tpl'
+
+-----
+
+<i class="icon icon-right icon-fw icon-calendar" title="Event"></i>
+[[+title]]
+<br>[[+range]]

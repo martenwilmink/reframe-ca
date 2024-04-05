@@ -1,0 +1,5 @@
+key: earthbrain.location_geocode_timeout
+value: '5'
+xtype: numberfield
+namespace: earthbrain
+area: Map

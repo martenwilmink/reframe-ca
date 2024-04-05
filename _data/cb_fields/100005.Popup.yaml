@@ -1,0 +1,14 @@
+id: 100005
+parent: 100001
+parent_properties: '{"key":"marker_popup","width":"10"}'
+input: dropdown
+name: Popup
+description: ''
+content_desc: ''
+sortorder: 3
+icon: paragraph
+template: '[[+value]]'
+properties: '{"options":"1==Yes\n2==No","default_value":"1","type_ahead":"No"}'
+availability: '[]'
+layouts: null
+settings: '[]'

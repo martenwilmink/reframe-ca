@@ -1,0 +1,28 @@
+id: 100063
+name: earthMapLayerJS
+description: ''
+category: E2_map
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e2_molecules/e2_map/earthmaplayerjs.chunk.tpl'
+
+-----
+
+let geoJson[[+layer_title]] = [[+layer_geojson:empty=`[]`]];
+let [[+layer_title:lcase]]Layer = L.geoJson(geoJson[[+layer_title]], {
+    pointToLayer: function(feature, latlng) {
+        return L.marker(latlng);
+    },
+    [[+marker_popup:eq=`1`:then=`
+    onEachFeature: addPopup
+    `]]
+});
+
+mapLayers[ "[[+layer_title]]" ] = [[+layer_title:lcase]]Layer;
+
+[[+show_on_load:eq=`1`:then=`
+map.addLayer([[+layer_title:lcase]]Layer);
+`]]
+[[+idx:eq=`1`:then=`
+primaryLayer = [[+layer_title:lcase]]Layer;
+`]]

@@ -1,0 +1,12 @@
+id: 100079
+name: tvSelectSeedParentPlantRow
+description: ''
+category: E1_sel_row
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/e1_sel_row/tvselectseedparentplantrow.chunk.tpl'
+
+-----
+
+[[+name:empty=`Unknown`]] ([[+forest_name]])
+[[+published:eq=`0`:then=`<i class="icon icon-right icon-fw icon-lock" title="Not visible to others"></i>`]]==[[+id]]

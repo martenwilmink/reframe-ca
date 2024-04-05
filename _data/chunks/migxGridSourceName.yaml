@@ -1,0 +1,25 @@
+id: 100038
+name: migxGridSourceName
+description: 'The available name field suffices in most cases, but sometimes an alternative name needs to be fetched from elsewhere, depending on the Source type.'
+category: E1_data
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridsourcename.chunk.tpl'
+
+-----
+
+[[Switch?
+    &get=`[[+class_key]]`
+    &c1=`earthSourcePerson` &do1=`[[+parent_id:userinfo=`fullname`:append=`<i class="icon icon-right icon-fw icon-[[+published:eq=`1`:then=`user`:else=`user-secret`]]" title="Person"></i> `]]`
+    &c2=`earthSourceEvent` &do2=`[[AgendaDetail? &id=`[[+parent_id]]` &tpl=`migxGridSourceNameEvent`]]`
+    &c3=`earthSourceOnline` &do3=`[[+name:append=`<i class="icon icon-right icon-fw icon-globe" title="Online"></i> `]]`
+    &c4=`earthSourceStore` &do4=`[[+name:append=`<i class="icon icon-right icon-fw icon-shopping-basket" title="Store"></i> `]]`
+    &c5=`earthSourceMarket` &do5=`[[+name:append=`<i class="icon icon-right icon-fw icon-shopping-bag" title="Market"></i> `]]`
+    &c6=`earthSourceCoop` &do6=`[[+name:append=`<i class="icon icon-right icon-fw icon-users" title="Cooperative"></i> `]]`
+    &c7=`earthSourceGov` &do7=`[[+name:append=`<i class="icon icon-right icon-fw icon-institution" title="Government"></i> `]]`
+    &c8=`earthSourceOrg` &do8=`[[+name:append=`<i class="icon icon-right icon-fw icon-building-o" title="Organization"></i> `]]`
+
+    [[$migxGridSourceNameAdditional? &idx=`[[+idx]]`]]
+
+    &default=`[[%earthbrain.source.unknown? &namespace=`earthbrain` &topic=`default`]] <i class="icon icon-right icon-fw icon-question-circle" title="Unknown"></i> `
+]]

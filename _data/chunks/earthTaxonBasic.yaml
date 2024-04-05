@@ -1,0 +1,16 @@
+id: 100057
+name: earthTaxonBasic
+description: ''
+category: E1_taxonomy
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_taxonomy/earthtaxonbasic.chunk.tpl'
+
+-----
+
+<strong>
+    [[+Taxon_name:empty=`Unknown`]]
+    [[+Taxon_name_local:prepend=`/ `]]
+</strong>
+[[+Taxon_name_latin:prepend=`<em class="meta">`:append=`</em>`]]
+[[+variety:prepend=`(Variety: `:append=`)`]]

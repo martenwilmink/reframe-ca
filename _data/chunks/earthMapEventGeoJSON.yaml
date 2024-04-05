@@ -1,0 +1,23 @@
+id: 100051
+name: earthMapEventGeoJSON
+description: ''
+category: E1_map
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_map/earthmapeventgeojson.chunk.tpl'
+
+-----
+
+{
+    "type": "Feature",
+    "properties": {
+        "name": "[[+title]]",
+        "amenity": "",
+        "popupContent": "[[$earthMapPopupContentEvent:strip:replace=`/==\/`? &idx=`[[+idx]]`]]",
+        "id": "event-[[+id]]"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [ [[+location]] ]
+    }
+}

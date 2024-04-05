@@ -1,0 +1,19 @@
+id: 100075
+name: tvSelectEarthOptionRowImage
+description: ''
+category: E1_sel_row
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/e1_sel_row/tvselectearthoptionrowimage.chunk.tpl'
+
+-----
+
+[[$migxGridImage?
+    &img=`[[+img]]`
+    &width=`800`
+    &max_width=`30%`
+    &class=`[[+class_key]]`
+    &uid=`[[+parent_id]]_[[+id]]`
+]]
+<br>
+[[+title:empty=`Untitled`]] ([[+id]])==[[+id]]

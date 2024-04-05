@@ -1,0 +1,43 @@
+id: 100056
+name: tvSelectSeedParentPlant
+description: ''
+category: E1_select
+properties: 'a:0:{}'
+static: 1
+static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/tvselectseedparentplant.chunk.tpl'
+
+-----
+
+--- Select parent plant ---==||
+[[pdoResources?
+    &class=`earthPlant`
+
+    &depth=`0`
+    &limit=`0`
+    &offset=`0`
+    &tpl=`tvSelectSeedParentPlantRow`
+    &where=`[
+        {"createdby:=":"[[+modx.user.id]]"}
+    ]`
+    &outputSeparator=`||`
+    &sortby=`id`
+
+    &leftJoin=`{
+        "Taxon": {
+            "class": "earthTaxon",
+            "on": "earthPlant.taxon_id = Taxon.id"
+        },
+        "CreatedBy": {
+            "class": "modUserProfile",
+            "on": "earthPlant.createdby = CreatedBy.internalKey"
+        }
+    }`
+    &groupby=`earthPlant.id`
+    &select=`{
+        "Taxon": "Taxon.name AS name, Taxon.name_local AS name_local",
+        "CreatedBy": "CreatedBy.fullname as owner",
+        "earthPlant": "id,published"
+    }`
+
+    &showLog=`0`
+]]
