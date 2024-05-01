@@ -75,21 +75,17 @@ if (!is_array($result)) {
 }
 
 // Flat arrays can be forwarded directly to the tpl chunk
-if (!$result[0]) {
+if (!isset($result[0])) {
     return $modx->getChunk($tpl, $result);
 }
 
 // Loop over multidimensional arrays
-if ($result[0]) {
-    $idx = 1;
-    foreach ($result as $row) {
-        $row['idx'] = $idx++;
-        $output[] = $modx->getChunk($tpl, $row);
-    }
-    return implode($outputSeparator,$output);
+$idx = 1;
+foreach ($result as $row) {
+    $row['idx'] = $idx++;
+    $output[] = $modx->getChunk($tpl, $row);
 }
-
-return '';
+return implode($outputSeparator,$output);
 
 // @todo: Investigate approach below, where recursiveArraySearch can find multiple instances using 'yield' instead of 'return'.
 //foreach ($romanesco->recursiveArraySearch($jsonArray,$object) as $result) {

@@ -56,6 +56,11 @@ foreach ($cbData as $field) {
         continue;
     }
 
+    // Skip multi file upload fields
+    if ($field['field'] == $modx->getOption('formblocks.cb_input_file_multiple_id', $scriptProperties)) {
+        continue;
+    }
+
     // All remaining fields
     $output[] = $prefix . $fieldName . ":required,";
 }

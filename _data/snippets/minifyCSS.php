@@ -31,6 +31,7 @@ if (!($romanesco instanceof Romanesco)) {
 }
 
 // Get CSS path from task properties, snippet properties or input
+$input = $modx->getOption('input', $scriptProperties, $input) ?? null;
 $cssPath = $modx->getOption('css_path', $scriptProperties, $input);
 
 // Generate CSS directly if snippet is run as scheduled task, or if Scheduler is not installed
