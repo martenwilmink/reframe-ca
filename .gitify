@@ -37,9 +37,9 @@ data:
 
         # Uncomment the exclude_keys below if you are loading packages with GPM
         # This ensures local paths of static files will not be copied to remote
-        #exclude_keys:
-        #    - static
-        #    - static_file
+        exclude_keys:
+            - static
+            - static_file
 
         # Exclude default template when extracting a fresh MODX installation
         where:
@@ -55,23 +55,23 @@ data:
     chunks:
         class: modChunk
         primary: name
-        #exclude_keys:
-        #    - static
-        #    - static_file
+        exclude_keys:
+            - static
+            - static_file
     snippets:
         class: modSnippet
         primary: name
         extension: .php
-        #exclude_keys:
-        #    - static
-        #    - static_file
+        exclude_keys:
+            - static
+            - static_file
     plugins:
         class: modPlugin
         primary: name
         extension: .php
-        #exclude_keys:
-        #    - static
-        #    - static_file
+        exclude_keys:
+            - static
+            - static_file
     plugin_events:
         class: modPluginEvent
         primary:
@@ -359,31 +359,31 @@ data:
             - resource
 
     # MIGX
-    migx_formtab:
-        class: migxFormtab
-        primary:
-            - id
-            - caption
-        package: migx
-    migx_formtab_field:
-        class: migxFormtabField
-        primary:
-            - id
-            - field
-    migx_config_element:
-        class: migxConfigElement
-        primary: id
-    migx_element:
-        class: migxElement
-        primary: id
-    migx_config:
-        class: migxConfig
-        primary:
-            - id
-            - name
-        exclude_keys:
-            - editedby
-            - editedon
+    #migx_formtab:
+    #    class: migxFormtab
+    #    primary:
+    #        - id
+    #        - caption
+    #    package: migx
+    #migx_formtab_field:
+    #    class: migxFormtabField
+    #    primary:
+    #        - id
+    #        - field
+    #migx_config_element:
+    #    class: migxConfigElement
+    #    primary: id
+    #migx_element:
+    #    class: migxElement
+    #    primary: id
+    #migx_config:
+    #    class: migxConfig
+    #    primary:
+    #        - id
+    #        - name
+    #    exclude_keys:
+    #        - editedby
+    #        - editedon
 
     # Romanesco
     romanesco_tasks:

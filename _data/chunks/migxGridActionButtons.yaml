@@ -6,6 +6,9 @@ properties: 'a:0:{}'
 
 -----
 
-<ul class="actions">
-    <li><a href="#" class="controlBtn update this.update">Edit</a></li>
-</ul>
+<div class="migx-actions-column">
+    <h3>[[+title]]</h3>
+    <ul class="actions">
+        <li><a href="#" class="controlBtn update this.update">Edit</a></li>
+    </ul>
+</div>

@@ -2,8 +2,19 @@ id: 100034
 name: migxGridLocation
 description: 'Show a marker if the object has a location attached. Clicking on the marker opens a popup with location details.'
 category: E1_data
-snippet: ''
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridlocation.chunk.tpl'
-content: ''
+
+-----
+
+[[+Location_lat:notempty=`
+<i class='icon icon-fw icon-map-marker'
+   title='Click to view coordinates'
+   onClick="alert('[[+Location_lat]][[+Location_lng:prepend=`, `]][[+Location_elevation:prepend=`, `:append=` m`]]');">
+</i>
+`]]
+[[+Location_geojson:notempty=`
+<i class='icon icon-fw icon-map-o'
+   title='Click to view GeoJSON data'
+   onClick="alert('[[+Location_geojson:htmlent]]');">
+</i>
+`]]

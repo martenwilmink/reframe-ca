@@ -4,8 +4,6 @@ name: footerAdditional
 description: ''
 category: Project
 properties: 'a:0:{}'
-static: 1
-static_file: chunks/footerAdditional.tpl
 
 -----
 

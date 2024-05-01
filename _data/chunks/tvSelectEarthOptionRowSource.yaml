@@ -7,10 +7,9 @@ properties: 'a:0:{}'
 -----
 
 [[$migxGridSourceName?
-    &type=`[[+type]]`
+    &parent_id=`[[+parent_id]]`
+    &class_key=`[[+class_key]]`
     &name=`[[+name]]`
-    &forest_id=`[[+forest_id]]`
-    &username=`[[+person_id:userinfo=`fullname`]]`
     &published=`[[+published]]`
     &idx=`[[+id]]`
 ]]==[[+id]]

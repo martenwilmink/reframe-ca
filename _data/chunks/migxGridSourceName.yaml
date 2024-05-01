@@ -19,5 +19,5 @@ properties: 'a:0:{}'
 
     [[$migxGridSourceNameAdditional? &idx=`[[+idx]]`]]
 
-    &default=`[[%earthbrain.source.unknown]] <i class="icon icon-right icon-fw icon-question-circle" title="Unknown"></i> `
+    &default=`[[%earthbrain.source.unknown? &namespace=`earthbrain` &topic=`default`]] <i class="icon icon-right icon-fw icon-question-circle" title="Unknown"></i> `
 ]]

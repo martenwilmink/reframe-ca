@@ -3,7 +3,6 @@ source: 1
 name: pdoTools
 category: pdoTools
 properties: null
-static_file: core/components/pdotools/elements/plugins/plugin.pdotools.php
 
 -----
 

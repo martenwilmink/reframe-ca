@@ -25,10 +25,6 @@ properties: 'a:0:{}'
             "class": "earthTaxon",
             "on": "earthPlant.taxon_id = Taxon.id"
         },
-        "Location": {
-            "class": "earthLocation",
-            "on": "earthPlant.location_id = Location.id"
-        },
         "CreatedBy": {
             "class": "modUserProfile",
             "on": "earthPlant.createdby = CreatedBy.internalKey"
@@ -37,7 +33,6 @@ properties: 'a:0:{}'
     &groupby=`earthPlant.id`
     &select=`{
         "Taxon": "Taxon.name AS name, Taxon.name_local AS name_local",
-        "Location": "Location.id AS location, Location.lat AS lat, Location.lng AS lng",
         "CreatedBy": "CreatedBy.fullname as owner",
         "earthPlant": "id,published"
     }`

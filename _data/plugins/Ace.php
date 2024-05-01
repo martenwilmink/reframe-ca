@@ -2,7 +2,6 @@ id: 100001
 name: Ace
 description: 'Ace code editor plugin for MODx Revolution'
 properties: null
-static_file: ace/elements/plugins/ace.plugin.php
 
 -----
 
