@@ -3,8 +3,6 @@ name: earthEventDetail
 description: ''
 category: E3_event
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e3_organisms/e3_event/eartheventdetail.chunk.tpl'
 
 -----
 

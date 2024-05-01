@@ -3,8 +3,6 @@ name: earthMap
 description: ''
 category: E3_map
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e3_organisms/e3_map/earthmap.chunk.tpl'
 
 -----
 

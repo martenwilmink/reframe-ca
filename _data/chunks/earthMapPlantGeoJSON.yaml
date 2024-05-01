@@ -3,8 +3,6 @@ name: earthMapPlantGeoJSON
 description: ''
 category: E1_map
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_map/earthmapplantgeojson.chunk.tpl'
 
 -----
 

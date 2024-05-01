@@ -2,10 +2,8 @@ id: 100033
 name: migxGridAddress
 description: 'Template for displaying addresses in grid.'
 category: E1_data
+snippet: ''
 properties: 'a:0:{}'
 static: 1
 static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridaddress.chunk.tpl'
-
------
-
-[[+Address_locality:append=`[[+Address_region:notempty=`, [[+Address_region]]`]]`]]
+content: ''

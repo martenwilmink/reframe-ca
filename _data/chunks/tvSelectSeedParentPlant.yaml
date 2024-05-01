@@ -3,8 +3,6 @@ name: tvSelectSeedParentPlant
 description: ''
 category: E1_select
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/tvselectseedparentplant.chunk.tpl'
 
 -----
 
@@ -27,6 +25,10 @@ static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/tvsel
             "class": "earthTaxon",
             "on": "earthPlant.taxon_id = Taxon.id"
         },
+        "Location": {
+            "class": "earthLocation",
+            "on": "earthPlant.location_id = Location.id"
+        },
         "CreatedBy": {
             "class": "modUserProfile",
             "on": "earthPlant.createdby = CreatedBy.internalKey"
@@ -35,6 +37,7 @@ static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/tvsel
     &groupby=`earthPlant.id`
     &select=`{
         "Taxon": "Taxon.name AS name, Taxon.name_local AS name_local",
+        "Location": "Location.id AS location, Location.lat AS lat, Location.lng AS lng",
         "CreatedBy": "CreatedBy.fullname as owner",
         "earthPlant": "id,published"
     }`

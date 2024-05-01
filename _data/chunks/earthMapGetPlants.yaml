@@ -3,8 +3,6 @@ name: earthMapGetPlants
 description: ''
 category: E2_map
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e2_molecules/e2_map/earthmapgetplants.chunk.tpl'
 
 -----
 

@@ -3,8 +3,6 @@ name: earthMapPopupImage
 description: 'Basic image tag for use in content chunks. The image path will be provided by corresponding pdoTools prepare snippet.'
 category: E1_map_popup
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_map/e1_map_popup/earthmappopupimage.chunk.tpl'
 
 -----
 

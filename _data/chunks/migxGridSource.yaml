@@ -3,8 +3,6 @@ name: migxGridSource
 description: 'Template for displaying sources in grid.'
 category: E1_data
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridsource.chunk.tpl'
 
 -----
 

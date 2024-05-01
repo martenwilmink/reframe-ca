@@ -3,8 +3,6 @@ name: migxGridParentWindow
 description: 'Container for the migxParentWindow snippet. Use as @CHUNK binding in MIGX configs to forward the win_id value to child objects.'
 category: E1_data
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridparentwindow.chunk.tpl'
 
 -----
 

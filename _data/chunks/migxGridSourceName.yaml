@@ -3,8 +3,6 @@ name: migxGridSourceName
 description: 'The available name field suffices in most cases, but sometimes an alternative name needs to be fetched from elsewhere, depending on the Source type.'
 category: E1_data
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridsourcename.chunk.tpl'
 
 -----
 
@@ -21,5 +19,5 @@ static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgri
 
     [[$migxGridSourceNameAdditional? &idx=`[[+idx]]`]]
 
-    &default=`[[%earthbrain.source.unknown? &namespace=`earthbrain` &topic=`default`]] <i class="icon icon-right icon-fw icon-question-circle" title="Unknown"></i> `
+    &default=`[[%earthbrain.source.unknown]] <i class="icon icon-right icon-fw icon-question-circle" title="Unknown"></i> `
 ]]

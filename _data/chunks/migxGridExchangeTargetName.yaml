@@ -3,8 +3,6 @@ name: migxGridExchangeTargetName
 description: 'Display correct name of exchange end point.'
 category: E1_data
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridexchangetargetname.chunk.tpl'
 
 -----
 

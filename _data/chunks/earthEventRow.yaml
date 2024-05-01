@@ -3,8 +3,6 @@ name: earthEventRow
 description: ''
 category: E2_event
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e2_molecules/e2_event/eartheventrow.chunk.tpl'
 
 -----
 

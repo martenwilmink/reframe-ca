@@ -3,15 +3,14 @@ name: tvSelectEarthOptionRowSource
 description: ''
 category: E1_sel_row
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_select/e1_sel_row/tvselectearthoptionrowsource.chunk.tpl'
 
 -----
 
 [[$migxGridSourceName?
-    &parent_id=`[[+parent_id]]`
-    &class_key=`[[+class_key]]`
+    &type=`[[+type]]`
     &name=`[[+name]]`
+    &forest_id=`[[+forest_id]]`
+    &username=`[[+person_id:userinfo=`fullname`]]`
     &published=`[[+published]]`
     &idx=`[[+id]]`
 ]]==[[+id]]

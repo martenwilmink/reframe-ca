@@ -3,8 +3,6 @@ name: earthMapPopupContent
 description: 'Basic format with name/title and description field.'
 category: E1_map_popup
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_map/e1_map_popup/earthmappopupcontent.chunk.tpl'
 
 -----
 

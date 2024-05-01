@@ -3,8 +3,6 @@ name: migxGridClassKey
 description: 'Template for displaying relevant information based on class key.'
 category: E1_data
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridclasskey.chunk.tpl'
 
 -----
 

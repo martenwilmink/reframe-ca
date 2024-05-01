@@ -3,8 +3,6 @@ name: migxGridImage
 description: 'Template for processing and displaying ImagePlus images. It needs the raw JSON as input. Also forward the class_key of the object, so the media source can be adjusted accordingly.'
 category: E1_data
 properties: 'a:0:{}'
-static: 1
-static_file: '[[++earthbrain.core_path]]elements/chunks/e1_atoms/e1_data/migxgridimage.chunk.tpl'
 
 -----
 
