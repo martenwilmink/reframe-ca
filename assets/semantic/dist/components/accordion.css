@@ -373,6 +373,9 @@
 .ui.accordion > .title .icon.header .content {
   padding: 0;
 }
+.ui.accordion > .title > .dropdown.icon.right {
+  margin-top: 0.3em;
+}
 @media screen and (min-width: 768px) {
   .ui.accordion.styled.padded > .title {
     padding: 1.2em 1.5em;

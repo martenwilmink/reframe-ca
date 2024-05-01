@@ -310,6 +310,10 @@
     margin-right: 0 !important;
   }
 }
+#menu > .ui.fluid.container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 body.readability #content .ui.container > * + h1,
 .ui.text.container:not(.conventional) > * + h1,
 body.readability #content .ui.container > * + h2,

@@ -85,7 +85,7 @@ h5:last-child {
 *******************************/
 
 p {
-  margin: 0em 0em 1.333em;
+  margin: 0 0 calc(var(--baseline) * 1.5rem);
   line-height: 1.4285em;
 }
 p:first-child {
@@ -364,8 +364,8 @@ li a:not(.button):not(.image):not(.item):not(.label):hover,
 .content a:not(.button):not(.image):not(.item):not(.label):hover,
 .header.inverted a:not(.button):not(.image):not(.item):not(.label):hover,
 .header.sub a:not(.button):not(.image):not(.item):not(.label):hover {
-  text-decoration-thickness: 1px;
-  text-decoration-style: solid;
+  text-decoration-thickness: 1px !important;
+  text-decoration-style: solid !important;
 }
 .header:not(.sub) a:not(.inverted),
 a.header:not(.inverted),
@@ -407,7 +407,6 @@ svg.hidden {
   display: none;
 }
 p {
-  margin: 0 0 calc(var(--baseline) * 1.5rem);
   font-weight: normal;
 }
 .lead {

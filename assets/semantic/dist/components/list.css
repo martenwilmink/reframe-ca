@@ -49,7 +49,7 @@ ol.ui.list li,
   list-style-type: none;
   list-style-position: outside;
   padding: 0.21428571em 0;
-  line-height: 1.14285714em;
+  line-height: 1.4285em;
 }
 ul.ui.list > li:first-child::after,
 ol.ui.list > li:first-child::after,
@@ -103,13 +103,13 @@ ol.ui.list ol li,
 .ui.list .list > .item > i.icon:not(.loading),
 .ui.list > .item > i.icon:not(.loading) {
   padding-right: 0.28571429em;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .ui.list .list > .item > i.icon:only-child,
 .ui.list > .item > i.icon:only-child {
   display: inline-block;
   min-width: auto;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 /* Image */
@@ -138,7 +138,7 @@ ol.ui.list ol li,
 /* Content */
 .ui.list .list > .item > .content,
 .ui.list > .item > .content {
-  line-height: 1.14285714em;
+  line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
 }
 .ui.list .list > .item > .image + .content,
@@ -249,7 +249,7 @@ ol.ui.list ol li,
   list-style-type: none;
   list-style-position: outside;
   padding: 0.21428571em 0;
-  line-height: 1.14285714em;
+  line-height: 1.4285em;
 }
 .ui.menu .ui.list .list > .item::before,
 .ui.menu .ui.list > .item::before {
@@ -953,8 +953,8 @@ ol.ui.suffixed.list li::before,
          Theme Overrides
 *******************************/
 
-.ui.list:not(ul ul),
-.ui.list:not(ol ol) {
+#content .ui.list:not(.overview):not(ul ul),
+#content .ui.list:not(.overview):not(ol ol) {
   margin-top: calc(var(--baseline) * 2rem);
 }
 ul.ui.list li:before {

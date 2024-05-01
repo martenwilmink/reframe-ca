@@ -639,7 +639,7 @@ h6.ui.header + .subtitle {
 .ui.icon.header + p > .button {
   margin-right: 0 !important;
 }
-.ui.icon.header.inverted > .icon {
+.ui.icon.header.inverted > .circular.icon {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
 }
 .ui.container.main:not(.conventional) > h1.header:first-child,

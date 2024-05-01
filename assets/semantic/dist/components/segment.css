@@ -825,6 +825,14 @@ body.vertical .ui.vertical.stripe.segment#dropdown-toc {
 .ui.background.segment {
   z-index: 0;
 }
+.ui.background.segment > .credits {
+  z-index: -1;
+  position: absolute;
+  right: 0.8em;
+  bottom: 0.3em;
+  opacity: 0.3;
+  font-size: 0.8em;
+}
 #hero.ui.segment {
   border-top: none;
 }
