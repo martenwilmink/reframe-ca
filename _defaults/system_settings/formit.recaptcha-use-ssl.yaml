@@ -2,3 +2,4 @@ key: formit.recaptcha_use_ssl
 xtype: combo-boolean
 namespace: formit
 area: reCaptcha
+value: '0'

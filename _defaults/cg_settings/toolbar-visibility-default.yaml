@@ -4,6 +4,6 @@ label: 'Default toolbar visibility'
 xtype: modx-combo
 description: 'This can be overruled on each page if needed.'
 sortorder: 21
-value: '1'
 group: 2
 options: On==1||Off==0
+value: '0'

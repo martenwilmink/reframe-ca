@@ -1,0 +1,4 @@
+key: earthbrain.member_dashboard_id
+xtype: numberfield
+namespace: earthbrain
+area: Members
